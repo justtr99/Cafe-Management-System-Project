@@ -21,7 +21,7 @@ namespace QuanLyQuanCafe.DAO
             DataTable dt = DBContext.GetDataBySql(sql);
             foreach (DataRow dr in dt.Rows)
             {
-                list.Add(new FoodDTO(int.Parse(dr["FoodID"].ToString()), dr["FoodName"].ToString(), float.Parse(dr["FoodPrice"].ToString()), int.Parse(dr["FoodCategoryID"].ToString()), int.Parse(dr["Quantity"].ToString())));
+                list.Add(new FoodDTO(int.Parse(dr["FoodID"].ToString()), dr["FoodName"].ToString(), float.Parse(dr["FoodPrice"].ToString()), int.Parse(dr["FoodCategoryID"].ToString()), int.Parse(dr["Quantity"].ToString()), dr["ImageLink"].ToString()));
             }
             return list;
 

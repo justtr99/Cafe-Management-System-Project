@@ -70,7 +70,8 @@ create table Food(
    FoodPrice float not null,
    FoodCategoryID int not null,
    Quantity int,
-   foreign key (FoodCategoryID) references FoodCategory(FoodCategoryID)
+   ImageLink nvarchar (max),
+    foreign key (FoodCategoryID) references FoodCategory(FoodCategoryID)
 )
 
 create table Bill(
@@ -122,8 +123,8 @@ values (N'Đồ ăn'), (N'Đồ uống')
 
 
 insert into Food
-values (N'Bò khô',50000,1,10),(N'Gà khô',50000,1,10),(N'Cafe nâu',25000,2,50),(N'Cafe đen',25000,2,50),
-(N'Bạc xỉu',30000,2,50),(N'Sinh tố bơ',35000,2,30)
+values (N'Bò khô',50000,1,10,N'https://cdn-i.vtcnews.vn/resize/th/upload/2020/10/06/2-00222890.jpg'),(N'Gà khô',50000,1,10,N'https://cdn.eva.vn/upload/3-2023/images/2023-07-21/1689925842-538-cach-lam-kho-ga-la-chanh-bang-noi-chien-khong-dau-tuyet-ngon-1-1689925831-622-width1000height800-1689925842-width1000height800.jpg'),(N'Cafe nâu',25000,2,50,N'https://caphekhoanbetong.com/wp-content/uploads/2021/08/ca-phe-nau-da-ha-noi-giao-hang-nhanh-1.jpg'),(N'Cafe đen',25000,2,50,N'https://neomartpro.com/wp-content/uploads/2020/05/cafedenda-1.jpg'),
+(N'Bạc xỉu',30000,2,50,N'https://classiccoffee.com.vn/files/news/cach-uong-bac-xiu-ngon-dung-chat-sai-gon-xua-njqlymst.jpg'),(N'Sinh tố bơ',35000,2,30,N'https://beptruong.edu.vn/wp-content/uploads/2021/03/sinh-to-bo-dua.jpg')
 
 insert into Room 
 values (N'Phòng ngoài'),(N'Phòng giữa'),(N'Phòng trong'),(N'Tầng 2')

@@ -63,9 +63,11 @@ namespace QuanLyQuanCafe
             {
                 System.Windows.Forms.Button btn = new System.Windows.Forms.Button { Width = TableDAO.TableWidth - 20, Height = TableDAO.TableHeight - 20 };
                 BillDTO checkBill = BillDAO.checkBillByTable(item.TableID);
+                
                 if (checkBill != null)
                 {
                     btn.BackColor = Color.FromArgb(128, 247, 113);
+                    
                     btn.Text = item.TableName + Environment.NewLine + "\n" + "Đã có người";
                 }
                 else
@@ -75,8 +77,11 @@ namespace QuanLyQuanCafe
                 }
                 btn.Cursor = Cursors.Hand;
                 btn.Click += btn_Click;
+                btn.BackgroundImageLayout = ImageLayout.Zoom;
                 btn.BackgroundImage = Resources.dining_table__2_;
+                btn.ImageAlign = ContentAlignment.MiddleCenter;
                 btn.Tag = item;
+                btn.Font = new System.Drawing.Font(btn.Font.FontFamily, 10, FontStyle.Bold);
                 flpListTable.Controls.Add(btn);
             }
 

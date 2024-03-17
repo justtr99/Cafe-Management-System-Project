@@ -14,6 +14,10 @@ namespace QuanLyQuanCafe.Models
         public float FoodPrice { get; set; }
         public string TypeName { get; set; }
         public int FoodCategoryID { get; set; }
+
+        public string imgLink { get; set; }
+
+
         public FoodDTO() { }
 
         public FoodDTO(int foodId, string foodName, float foodPrice, int foodCategoryID, int quantity)
@@ -31,6 +35,24 @@ namespace QuanLyQuanCafe.Models
             {
                 TypeName = "Đồ uống";
             }
+        }
+
+        public FoodDTO(int foodId, string foodName, float foodPrice, int foodCategoryID, int quantity, string imgLink)
+        {
+            FoodId = foodId;
+            FoodName = foodName;
+            FoodPrice = foodPrice;
+            FoodCategoryID = foodCategoryID;
+            Quantity = quantity;
+            if (foodCategoryID == 1)
+            {
+                TypeName = "Đồ ăn";
+            }
+            else
+            {
+                TypeName = "Đồ uống";
+            }
+            this.imgLink = imgLink;
         }
     }
 }
