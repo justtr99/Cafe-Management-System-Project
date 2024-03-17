@@ -47,3 +47,4 @@ D:\QuanLyQuanCafe\QuanLyQuanCafe\obj\Debug\net6.0-windows\QuanLyQuanCafe.ViewPro
 D:\QuanLyQuanCafe\QuanLyQuanCafe\obj\Debug\net6.0-windows\QuanLyQuanCafe.OrderForm.resources
 D:\QuanLyQuanCafe\QuanLyQuanCafe\obj\Debug\net6.0-windows\QuanLyQuanCafe.UpdateFoodInBill.resources
 D:\QuanLyQuanCafe\QuanLyQuanCafe\obj\Debug\net6.0-windows\QuanLyQuanCafe.ListFood.resources
+D:\QuanLyQuanCafe\QuanLyQuanCafe\obj\Debug\net6.0-windows\QuanLyQuanCafe.sourcelink.json

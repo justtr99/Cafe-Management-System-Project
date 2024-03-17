@@ -43,7 +43,7 @@ namespace QuanLyQuanCafe
                 home.FormClosed += HomePage_FormClosed; // Gắn sự kiện khi form tableManager đóng
                
             }
-            else MessageBox.Show("That bai");
+            else MessageBox.Show("Tài khoản hoặc mật khẩu không đúng", "Thông báo");
         }
         private void HomePage_FormClosed(object sender, FormClosedEventArgs e)
         {

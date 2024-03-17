@@ -116,19 +116,20 @@
             // 
             btnUsername.BackColor = SystemColors.ButtonFace;
             btnUsername.BorderStyle = BorderStyle.None;
+            btnUsername.Font = new Font("Segoe UI", 10.8F, FontStyle.Regular, GraphicsUnit.Point);
             btnUsername.Location = new Point(453, 190);
             btnUsername.Name = "btnUsername";
-            btnUsername.Size = new Size(328, 20);
+            btnUsername.Size = new Size(328, 24);
             btnUsername.TabIndex = 6;
             // 
             // btnPassword
             // 
             btnPassword.BackColor = SystemColors.ButtonFace;
             btnPassword.BorderStyle = BorderStyle.None;
-            btnPassword.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            btnPassword.Font = new Font("Segoe UI", 10.8F, FontStyle.Regular, GraphicsUnit.Point);
             btnPassword.Location = new Point(453, 275);
             btnPassword.Name = "btnPassword";
-            btnPassword.Size = new Size(328, 20);
+            btnPassword.Size = new Size(328, 24);
             btnPassword.TabIndex = 7;
             btnPassword.UseSystemPasswordChar = true;
             // 
