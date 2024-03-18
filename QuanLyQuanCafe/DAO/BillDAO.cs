@@ -36,12 +36,48 @@ namespace QuanLyQuanCafe.DAO
                     DateTime.Parse(dr["TimeCheckOut"].ToString()),
                     int.Parse(dr["TableID"].ToString()),
                     dr["BillStatus"].ToString(),
-                    int.Parse(dr["AccountID"].ToString())
+                    int.Parse(dr["AccountID"].ToString()),
+                    float.Parse(dr["Total"].ToString())
                     ));
                 }
                 
             }
             return listBill;    
+        }
+
+        public static List<BillDTO> getAllBillByDayEachEmployee(string Start, string End, int page,int empID)
+        {
+            List<BillDTO> listBill = new List<BillDTO>();
+            string sql = "SELECT * FROM Bill WHERE (CAST(TimeCheckIn AS DATE) between @Start and @End) and Bill.AccountID = @id "
+                + " order by TimeCheckIn "
+                + "Offset @page rows fetch next 10 rows only";
+            SqlParameter parameter1 = new SqlParameter("@Start", DbType.String),
+                parameter2 = new SqlParameter("@End", DbType.String),
+                parameter3 = new SqlParameter("@page", DbType.Int32),
+                parameter4 = new SqlParameter("@id", DbType.Int32);
+
+            parameter1.Value = Start;
+            parameter2.Value = End;
+            parameter3.Value = (page - 1) * 10;
+            parameter4.Value = empID;
+            DataTable dt = DBContext.GetDataBySql(sql, parameter1, parameter2, parameter3,parameter4);
+            foreach (DataRow dr in dt.Rows)
+            {
+                if (dr["BillStatus"].ToString().Equals("Đã thanh toán"))
+                {
+                    listBill.Add(new BillDTO(
+                    int.Parse(dr["BillID"].ToString()),
+                    DateTime.Parse(dr["TimeCheckIn"].ToString()),
+                    DateTime.Parse(dr["TimeCheckOut"].ToString()),
+                    int.Parse(dr["TableID"].ToString()),
+                    dr["BillStatus"].ToString(),
+                    int.Parse(dr["AccountID"].ToString()),
+                    float.Parse(dr["Total"].ToString())
+                    ));
+                }
+
+            }
+            return listBill;
         }
 
         public static int countBillByDay(string Start, string End)
