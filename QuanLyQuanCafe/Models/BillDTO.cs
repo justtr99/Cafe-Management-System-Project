@@ -27,6 +27,17 @@ namespace QuanLyQuanCafe.Models
             AccountID = accountID;
         }
 
+        public BillDTO(int billID, DateTime timeCheckIn, DateTime timeCheckOut, int tableID, string billStatus, int accountID,float total)
+        {
+            BillID = billID;
+            TimeCheckIn = timeCheckIn;
+            TimeCheckOut = timeCheckOut;
+            TableID = tableID;
+            BillStatus = billStatus;
+            AccountID = accountID;
+            Total = total;
+        }
+
         public BillDTO(int billID, DateTime timeCheckIn, int tableID, string billStatus, int accountID)
         {
             BillID = billID;
@@ -35,6 +46,7 @@ namespace QuanLyQuanCafe.Models
             BillStatus = billStatus;
             AccountID = accountID;
         }
+
         public BillDTO() { }
     }
 }
