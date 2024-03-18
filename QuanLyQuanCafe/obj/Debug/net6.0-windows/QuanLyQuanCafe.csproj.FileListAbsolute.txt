@@ -48,3 +48,4 @@ D:\QuanLyQuanCafe\QuanLyQuanCafe\obj\Debug\net6.0-windows\QuanLyQuanCafe.OrderFo
 D:\QuanLyQuanCafe\QuanLyQuanCafe\obj\Debug\net6.0-windows\QuanLyQuanCafe.UpdateFoodInBill.resources
 D:\QuanLyQuanCafe\QuanLyQuanCafe\obj\Debug\net6.0-windows\QuanLyQuanCafe.ListFood.resources
 D:\QuanLyQuanCafe\QuanLyQuanCafe\obj\Debug\net6.0-windows\QuanLyQuanCafe.sourcelink.json
+D:\QuanLyQuanCafe\QuanLyQuanCafe\obj\Debug\net6.0-windows\QuanLyQuanCafe.Invoice.resources

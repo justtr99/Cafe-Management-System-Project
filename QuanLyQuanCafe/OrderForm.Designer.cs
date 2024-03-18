@@ -182,9 +182,9 @@
             // cbDoiRoom
             // 
             cbDoiRoom.FormattingEnabled = true;
-            cbDoiRoom.Location = new Point(640, 599);
+            cbDoiRoom.Location = new Point(626, 599);
             cbDoiRoom.Name = "cbDoiRoom";
-            cbDoiRoom.Size = new Size(98, 28);
+            cbDoiRoom.Size = new Size(112, 28);
             cbDoiRoom.TabIndex = 12;
             // 
             // btnChuyenBan
