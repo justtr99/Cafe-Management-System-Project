@@ -51,6 +51,7 @@
             // btnThongke
             // 
             btnThongke.BackColor = Color.FromArgb(219, 184, 142);
+            btnThongke.Cursor = Cursors.Hand;
             btnThongke.FlatAppearance.BorderSize = 0;
             btnThongke.FlatStyle = FlatStyle.Flat;
             btnThongke.Font = new Font("Segoe UI Semibold", 10.8F, FontStyle.Bold, GraphicsUnit.Point);
@@ -105,7 +106,7 @@
             // Page
             // 
             Page.AutoSize = true;
-            Page.BackColor = Color.Gray;
+            Page.BackColor = Color.FromArgb(219, 184, 142);
             Page.ForeColor = SystemColors.ButtonHighlight;
             Page.Location = new Point(581, 632);
             Page.Name = "Page";
@@ -115,21 +116,33 @@
             // 
             // btnNext
             // 
+            btnNext.BackColor = Color.FromArgb(219, 184, 142);
+            btnNext.Cursor = Cursors.Hand;
+            btnNext.FlatAppearance.BorderSize = 0;
+            btnNext.FlatStyle = FlatStyle.Flat;
+            btnNext.ForeColor = SystemColors.ButtonHighlight;
             btnNext.Location = new Point(624, 628);
             btnNext.Name = "btnNext";
             btnNext.Size = new Size(58, 29);
             btnNext.TabIndex = 14;
             btnNext.Text = "Sau";
-            btnNext.UseVisualStyleBackColor = true;
+            btnNext.UseVisualStyleBackColor = false;
+            btnNext.Click += btnNext_Click_1;
             // 
             // btnBefore
             // 
+            btnBefore.BackColor = Color.FromArgb(219, 184, 142);
+            btnBefore.Cursor = Cursors.Hand;
+            btnBefore.FlatAppearance.BorderSize = 0;
+            btnBefore.FlatStyle = FlatStyle.Flat;
+            btnBefore.ForeColor = SystemColors.ButtonHighlight;
             btnBefore.Location = new Point(512, 628);
             btnBefore.Name = "btnBefore";
             btnBefore.Size = new Size(58, 29);
             btnBefore.TabIndex = 13;
             btnBefore.Text = "Trước";
-            btnBefore.UseVisualStyleBackColor = true;
+            btnBefore.UseVisualStyleBackColor = false;
+            btnBefore.Click += btnBefore_Click_1;
             // 
             // Invoice
             // 

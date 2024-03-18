@@ -85,7 +85,7 @@ namespace QuanLyQuanCafe.DAO
             int count = 0;
             string sql = "SELECT COUNT(BillID) as dem FROM ( "
                 + "SELECT BillID \r\n    FROM Bill "
-                + "WHERE (CAST(TimeCheckIn AS DATE) BETWEEN @start AND @end) "
+                + "WHERE (CAST(TimeCheckIn AS DATE) BETWEEN @start AND @end)  "
                 + " "
                 + " ) AS bill;";
             SqlParameter parameter1 = new SqlParameter("@start", DbType.String),
@@ -94,6 +94,32 @@ namespace QuanLyQuanCafe.DAO
             parameter2.Value = End;
             DataTable dt = DBContext.GetDataBySql(sql, parameter1, parameter2);
             foreach (DataRow dr in dt.Rows) 
+            {
+                if (dr["dem"] != null)
+                {
+                    count = int.Parse(dr["dem"].ToString());
+                }
+                else count = 0;
+            }
+            return count;
+        }
+
+        public static int countBillByDayEmployee(string Start, string End,int empID)
+        {
+            int count = 0;
+            string sql = "SELECT COUNT(BillID) as dem FROM ( "
+                + "SELECT BillID \r\n    FROM Bill "
+                + "WHERE (CAST(TimeCheckIn AS DATE) BETWEEN @start AND @end) and Bill.AccountID = @id "
+                + " ) AS bill;";
+            SqlParameter parameter1 = new SqlParameter("@start", DbType.String),
+                parameter2 = new SqlParameter("@end", DbType.String),
+                parameter3 = new SqlParameter("@id",DbType.Int32);
+            
+            parameter1.Value = Start;
+            parameter2.Value = End;
+            parameter3.Value = empID;
+            DataTable dt = DBContext.GetDataBySql(sql, parameter1, parameter2, parameter3);
+            foreach (DataRow dr in dt.Rows)
             {
                 if (dr["dem"] != null)
                 {

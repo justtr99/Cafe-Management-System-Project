@@ -22,8 +22,11 @@ namespace QuanLyQuanCafe
             InitializeComponent();
 
         }
+
+        int PageNow = 1;
         public void loadInvoice()
         {
+            Page.Text = "" + PageNow + "/" + countPage();
             flpListTable.Controls.Clear();
 
             Button btnContent = new Button();
@@ -64,7 +67,7 @@ namespace QuanLyQuanCafe
             btnContent.Controls.Add(content4);
             flpListTable.Controls.Add(btnContent);
 
-            List<BillDTO> listBill = BillDAO.getAllBillByDayEachEmployee(dateStart.Text, dateEnd.Text, 1, Account.account.Id);
+            List<BillDTO> listBill = BillDAO.getAllBillByDayEachEmployee(dateStart.Text, dateEnd.Text, PageNow, Account.account.Id);
             for (int i = 0; i < listBill.Count; i++)
             {
                 Button button = new Button();
@@ -99,7 +102,7 @@ namespace QuanLyQuanCafe
 
                 label5.AutoSize = true; // Auto size the label based on its contents
                 label5.Font = new System.Drawing.Font(button.Font.FontFamily, 9, FontStyle.Regular);
-                label5.Text = listBill[i].Total.ToString()+"đ";
+                label5.Text = listBill[i].Total.ToString() + "đ";
                 label5.Location = new Point(530, labelY);
                 button.Controls.Add(label5);
                 SetRoundedButton(button, 15);
@@ -111,6 +114,8 @@ namespace QuanLyQuanCafe
 
             loadInvoice();
             SetRoundedButton(btnThongke, 15);
+            SetRoundedButton(btnNext, 15);
+            SetRoundedButton(btnBefore, 15);
         }
 
         private void SetRoundedButton(Button button, int radius)
@@ -127,6 +132,41 @@ namespace QuanLyQuanCafe
         private void btnThongke_Click(object sender, EventArgs e)
         {
             loadInvoice();
+        }
+
+        public int countPage()
+        {
+            int countPage = 0;
+            int count = BillDAO.countBillByDayEmployee(dateStart.Text, dateEnd.Text, Account.account.Id);
+            if (count > 0)
+            {
+                if (count % 10 == 0) { countPage = count / 10; }
+                else { countPage = count / 10 + 1; }
+            }
+            return countPage;
+        }
+
+      
+
+
+
+        private void btnBefore_Click_1(object sender, EventArgs e)
+        {
+            if (PageNow > 1)
+            {
+                PageNow--;
+                loadInvoice();
+            }
+        }
+
+        private void btnNext_Click_1(object sender, EventArgs e)
+        {
+            int pageEnd = countPage();
+            if (PageNow < pageEnd)
+            {
+                PageNow++;
+                loadInvoice();
+            }
         }
     }
 }
