@@ -55,6 +55,12 @@ namespace QuanLyQuanCafe
             panelHoaDon.BackColor = Color.FromArgb(116, 76, 31);
             btnHoadon.BackColor = Color.FromArgb(116, 76, 31);
             panelManager.Controls.Clear();
+            Invoice invoice = new Invoice();
+            invoice.TopLevel = false;
+            this.panelManager.Controls.Add(invoice);
+            invoice.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            invoice.Dock = DockStyle.Fill;
+            invoice.Show();
         }
 
         private void btnProfile_Click(object sender, EventArgs e)
