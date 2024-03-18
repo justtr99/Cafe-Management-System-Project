@@ -32,9 +32,11 @@
             label2 = new Label();
             label3 = new Label();
             label1 = new Label();
-            textBox1 = new TextBox();
-            comboBox1 = new ComboBox();
-            listView1 = new ListView();
+            txtFoodName = new TextBox();
+            cbType = new ComboBox();
+            listViewOrder = new ListView();
+            button1 = new Button();
+            label4 = new Label();
             SuspendLayout();
             // 
             // flowLayoutPanel1
@@ -80,30 +82,57 @@
             label1.TabIndex = 4;
             label1.Text = "Tên đồ ăn:";
             // 
-            // textBox1
+            // txtFoodName
             // 
-            textBox1.Location = new Point(141, 74);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(210, 27);
-            textBox1.TabIndex = 5;
+            txtFoodName.Location = new Point(141, 74);
+            txtFoodName.Name = "txtFoodName";
+            txtFoodName.Size = new Size(210, 27);
+            txtFoodName.TabIndex = 5;
+            txtFoodName.TextChanged += txtFoodName_TextChanged;
             // 
-            // comboBox1
+            // cbType
             // 
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(141, 118);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(210, 28);
-            comboBox1.TabIndex = 6;
+            cbType.FormattingEnabled = true;
+            cbType.Items.AddRange(new object[] { "Tất cả", "Đồ ăn", "Đồ uống" });
+            cbType.Location = new Point(141, 118);
+            cbType.Name = "cbType";
+            cbType.Size = new Size(210, 28);
+            cbType.TabIndex = 6;
+            cbType.SelectedValueChanged += cbType_SelectedValueChanged;
             // 
-            // listView1
+            // listViewOrder
             // 
-            listView1.GridLines = true;
-            listView1.Location = new Point(738, 165);
-            listView1.Name = "listView1";
-            listView1.Size = new Size(374, 456);
-            listView1.TabIndex = 7;
-            listView1.UseCompatibleStateImageBehavior = false;
-            listView1.View = View.Details;
+            listViewOrder.GridLines = true;
+            listViewOrder.Location = new Point(738, 165);
+            listViewOrder.Name = "listViewOrder";
+            listViewOrder.Size = new Size(374, 412);
+            listViewOrder.TabIndex = 7;
+            listViewOrder.UseCompatibleStateImageBehavior = false;
+            listViewOrder.View = View.Details;
+            // 
+            // button1
+            // 
+            button1.BackColor = Color.White;
+            button1.FlatAppearance.BorderSize = 0;
+            button1.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            button1.Location = new Point(871, 583);
+            button1.Name = "button1";
+            button1.Size = new Size(137, 38);
+            button1.TabIndex = 8;
+            button1.Text = "Xác nhận";
+            button1.UseVisualStyleBackColor = false;
+            button1.Click += button1_Click;
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            label4.ForeColor = Color.White;
+            label4.Location = new Point(732, 122);
+            label4.Name = "label4";
+            label4.Size = new Size(161, 28);
+            label4.TabIndex = 9;
+            label4.Text = "Danh sách order";
             // 
             // ListFood
             // 
@@ -111,9 +140,11 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(219, 184, 142);
             ClientSize = new Size(1149, 633);
-            Controls.Add(listView1);
-            Controls.Add(comboBox1);
-            Controls.Add(textBox1);
+            Controls.Add(label4);
+            Controls.Add(button1);
+            Controls.Add(listViewOrder);
+            Controls.Add(cbType);
+            Controls.Add(txtFoodName);
             Controls.Add(label1);
             Controls.Add(label3);
             Controls.Add(label2);
@@ -131,8 +162,10 @@
         private Label label2;
         private Label label3;
         private Label label1;
-        private TextBox textBox1;
-        private ComboBox comboBox1;
-        private ListView listView1;
+        private TextBox txtFoodName;
+        private ComboBox cbType;
+        private ListView listViewOrder;
+        private Button button1;
+        private Label label4;
     }
 }

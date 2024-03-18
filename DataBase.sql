@@ -109,6 +109,10 @@ FROM (
 update Bill 
 set Total = 300000 where BillID =2
 
+select * from Bill
+
+
+
 
 
 insert into Role 
@@ -133,8 +137,8 @@ insert into [Table] (TableName,RoomID)
 values (N'Bàn 1',1),(N'Bàn 2',1),(N'Bàn 3',1),(N'Bàn 4',1),(N'Bàn 1',2),(N'Bàn 2',2),
 (N'Bàn 1',3),(N'Bàn 2',3),(N'Bàn 3',3),(N'Bàn 1',4),(N'Bàn 2',4)
 
-insert into [Bill] (TimeCheckIn,TimeCheckOut,TableID,BillStatus,AccountID)
-values ('2024-03-08 19:06', '2024-03-08 20:06',2,N'Đã thanh toán',1),
+	insert into [Bill] (TimeCheckIn,TimeCheckOut,TableID,BillStatus,AccountID)
+	values ('2024-03-08 19:06', '2024-03-08 20:06',2,N'Đã thanh toán',1),
 ('2024-03-09 18:06', '2024-03-09 20:06',4,N'Chưa thanh toán',1)
 
 insert into BillInfo values
@@ -151,22 +155,52 @@ and (CAST(TimeCheckOut AS DATE) between '2024-03-04' and '2024-03-09')
 order by TimeCheckIn
 Offset ? rows fetch next 15 rows only
 
+select * from Bill
+
+update Bill
+set TimeCheckOut = GETDATE() where BillID in (11,16)
+
 SELECT sum(Total) as doanhThu FROM (
     SELECT Total 
     FROM Bill 
-    WHERE (CAST(TimeCheckIn AS DATE) BETWEEN '2024-03-04' AND '2024-03-09') 
-    AND (CAST(TimeCheckOut AS DATE) BETWEEN '2024-03-04' AND '2024-03-09')
+    WHERE (CAST(TimeCheckIn AS DATE) BETWEEN '2029-03-17' AND '2029-03-19') 
 ) AS bill;
 
+update Bill
+set Total = (select total from (
+select Sum (Food.FoodPrice * BillInfo.Quantity) as total,BillInfo.BillID
+from BillInfo
+join Food on BillInfo.FoodID = Food.FoodID
+where BillInfo.BillID = 11
+group by BillInfo.BillID ) tinhTien )
+where BillID = 11  
 
+delete BillInfo
+delete Bill
+
+select Food.* from Food
+join FoodCategory on Food.FoodCategoryID = FoodCategory.FoodCategoryID
+where FoodName like '%%' and FoodCategory.FoodCategoryName like '%%'
+
+ update Bill 
+ set BillStatus = N'Đã thanh toán', TimeCheckOut = GETDATE() 
+ where BillID = 21
+
+select * from Food
+
+select * from Bill
 
 SELECT LEFT(CONVERT(varchar, GETDATE(), 120), 16) AS ngay_thang_gio_phut_hien_tai;
 
 
 
 //
-select * from Bill
-where TableID = 2 and BillStatus = N'Chưa thanh toán'
+select * from BillInfo
+delete Bill
+where BillID = 7
+
+
+
 
 select * from BillInfo 
 where BillID = 10 and FoodID = 3

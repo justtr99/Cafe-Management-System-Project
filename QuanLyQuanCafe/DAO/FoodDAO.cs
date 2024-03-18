@@ -27,6 +27,26 @@ namespace QuanLyQuanCafe.DAO
 
         }
 
+        public static List<FoodDTO> getAllFoodByNameAndType(string name,string typeFood )
+        {
+            
+            List<FoodDTO> list = new List<FoodDTO>();
+            string sql = "select Food.* from Food "
+                + "join FoodCategory on Food.FoodCategoryID = FoodCategory.FoodCategoryID "
+                + "where FoodName like @name and FoodCategory.FoodCategoryName like @typeFood";
+            SqlParameter parameters1 = new SqlParameter("@name", DbType.String),
+               parameter2 = new SqlParameter("@typeFood", DbType.String);
+            parameters1.Value = "%" + name + "%";
+            parameter2.Value = "%" + typeFood + "%";
+            DataTable dt = DBContext.GetDataBySql(sql,parameters1,parameter2);
+            foreach (DataRow dr in dt.Rows)
+            {
+                list.Add(new FoodDTO(int.Parse(dr["FoodID"].ToString()), dr["FoodName"].ToString(), float.Parse(dr["FoodPrice"].ToString()), int.Parse(dr["FoodCategoryID"].ToString()), int.Parse(dr["Quantity"].ToString()), dr["ImageLink"].ToString()));
+            }
+            return list;
+
+        }
+
         public static List<FoodDTO> getSearchFood(string name,int type)
         {
             List<FoodDTO> list = new List<FoodDTO>();

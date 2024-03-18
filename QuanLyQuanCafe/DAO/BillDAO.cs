@@ -17,7 +17,7 @@ namespace QuanLyQuanCafe.DAO
         {
             List<BillDTO> listBill = new List<BillDTO>();
             string sql = "SELECT * FROM Bill WHERE (CAST(TimeCheckIn AS DATE) between @Start and @End) "
-                + "and (CAST(TimeCheckOut AS DATE) between @Start and @End) order by TimeCheckIn "
+                + " order by TimeCheckIn "
                 + "Offset @page rows fetch next 15 rows only";
             SqlParameter parameter1 = new SqlParameter("@Start", DbType.String),
                 parameter2 = new SqlParameter("@End", DbType.String),
@@ -50,7 +50,7 @@ namespace QuanLyQuanCafe.DAO
             string sql = "SELECT COUNT(BillID) as dem FROM ( "
                 + "SELECT BillID \r\n    FROM Bill "
                 + "WHERE (CAST(TimeCheckIn AS DATE) BETWEEN @start AND @end) "
-                + "AND (CAST(TimeCheckOut AS DATE) BETWEEN @start AND @end) "
+                + " "
                 + " ) AS bill;";
             SqlParameter parameter1 = new SqlParameter("@start", DbType.String),
                 parameter2 = new SqlParameter("@end", DbType.String);
@@ -59,7 +59,11 @@ namespace QuanLyQuanCafe.DAO
             DataTable dt = DBContext.GetDataBySql(sql, parameter1, parameter2);
             foreach (DataRow dr in dt.Rows) 
             {
-                count = int.Parse(dr["dem"].ToString());
+                if (dr["dem"] != null)
+                {
+                    count = int.Parse(dr["dem"].ToString());
+                }
+                else count = 0;
             }
             return count;
         }
@@ -70,16 +74,19 @@ namespace QuanLyQuanCafe.DAO
             string sql = "SELECT sum(Total) as doanhThu FROM ( "
                 + "SELECT Total \r\n    FROM Bill "
                 + "WHERE (CAST(TimeCheckIn AS DATE) BETWEEN @start AND @end) "
-                + "AND (CAST(TimeCheckOut AS DATE) BETWEEN @start AND @end) "
+                + " "
                 + " ) AS bill;";
             SqlParameter parameter1 = new SqlParameter("@start", DbType.String),
                 parameter2 = new SqlParameter("@end", DbType.String);
             parameter1.Value = Start;
             parameter2.Value = End;
-            DataTable dt = DBContext.GetDataBySql(sql, parameter1, parameter2);
+            DataTable dt = DBContext.GetDataBySql(sql, parameter1,parameter2);
             foreach (DataRow dr in dt.Rows)
             {
-                doanhThu = float.Parse(dr["doanhThu"].ToString());
+                if (dr["doanhThu"] != null && dr["doanhThu"].ToString().Length>0)
+                {
+                    doanhThu = float.Parse(dr["doanhThu"].ToString());
+                }else doanhThu = 0;
             }
             return doanhThu;
         }
@@ -96,7 +103,6 @@ namespace QuanLyQuanCafe.DAO
                 billDTO = new BillDTO(
                     int.Parse(dr["BillID"].ToString()),
                     DateTime.Parse(dr["TimeCheckIn"].ToString()),
-                    DateTime.Parse(dr["TimeCheckOut"].ToString()),
                     int.Parse(dr["TableID"].ToString()),
                     dr["BillStatus"].ToString(),
                     int.Parse(dr["AccountID"].ToString())
@@ -117,6 +123,64 @@ namespace QuanLyQuanCafe.DAO
                 return true;
             }
 
+            return false;
+        }
+        public static bool insertBill(int TableID,int AccountID)
+        {
+            string sql = "insert into Bill (TimeCheckIn,TableID,BillStatus,AccountID) "
+                + "values (GETDATE(),@TableID,N'Chưa thanh toán',@AccountID) ";
+            SqlParameter parameter1 = new SqlParameter("@TableID", DbType.Int32),
+                parameter2 = new SqlParameter("@AccountID",DbType.Int32);
+            parameter1.Value = TableID;
+            parameter2.Value = AccountID;
+            int count = DBContext.ExecuteBySql(sql, parameter1, parameter2);
+            if (count > 0) { return true; }
+
+            return false;
+        }
+
+        public static int getBillByTable(int tableID)
+        {
+            int id = 0;
+            string sql = "select BillID "
+                + "from Bill "
+                + " Where TableID = @ID and BillStatus = N'Chưa thanh toán'";
+            SqlParameter parameter1 = new SqlParameter("@ID",DbType.Int32);
+            parameter1.Value = tableID;
+            DataTable dt = DBContext.GetDataBySql(sql, parameter1);
+            foreach (DataRow dr in dt.Rows) {
+               id = int.Parse(dr["BillID"].ToString());
+            }
+            return id;
+
+        }
+
+        public static bool thanhToan(int BillID)
+        {
+            string sql = "update Bill "
+                + "set BillStatus = N'Đã thanh toán', TimeCheckOut = GETDATE() \n"
+                + "where BillID = @id";
+            SqlParameter parameter1 = new SqlParameter("@id",DbType.Int32);
+            parameter1.Value = BillID;
+            int count = DBContext.ExecuteBySql(sql, parameter1);
+            if (count > 0) { return true; }
+            return false;
+        }
+
+        public static bool tinhTotal(int BillID)
+        {
+            string sql = "update Bill "
+                + "set Total = (select total from ( "
+                + "select Sum (Food.FoodPrice * BillInfo.Quantity) as total,BillInfo.BillID "
+                + "from BillInfo "
+                + "join Food on BillInfo.FoodID = Food.FoodID "
+                + "where BillInfo.BillID = @id "
+                + "group by BillInfo.BillID ) tinhTien ) "
+                + "where BillID = @id  ";
+            SqlParameter parameter1 = new SqlParameter("@id", DbType.Int32);
+            parameter1.Value = BillID;
+            int count = DBContext.ExecuteBySql(sql, parameter1);
+            if (count > 0) { return true; }
             return false;
         }
 

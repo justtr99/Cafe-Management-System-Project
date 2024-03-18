@@ -82,6 +82,22 @@ namespace QuanLyQuanCafe.DAO
             if(count > 0) { return true; }
             return false;
         }
+
+        public static bool insertBillInfo(int BillID,int FoodID, int Quantity)
+        {
+            string sql = "insert into BillInfo "
+                + "values (@BillID,@FoodID,@Quantity)";
+            SqlParameter parameter1 = new SqlParameter("@BillID", DbType.Int32),
+                parameter2 = new SqlParameter("@FoodID", DbType.Int32),
+                parameter3 = new SqlParameter("@Quantity",DbType.Int32);
+            parameter1.Value = BillID;  
+            parameter2.Value = FoodID;
+            parameter3.Value = Quantity;
+            int count = DBContext.ExecuteBySql(sql, parameter1, parameter2, parameter3);
+            if(count > 0) { return true; }
+
+            return false;
+        }
         
         
 

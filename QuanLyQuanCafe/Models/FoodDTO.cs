@@ -54,5 +54,12 @@ namespace QuanLyQuanCafe.Models
             }
             this.imgLink = imgLink;
         }
+
+        public FoodDTO(string foodName, int quantity, float foodPrice)
+        {
+            FoodName = foodName;
+            Quantity = quantity;
+            FoodPrice = foodPrice;
+        }
     }
 }

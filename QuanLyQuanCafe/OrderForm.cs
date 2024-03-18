@@ -53,7 +53,7 @@ namespace QuanLyQuanCafe
         }
 
 
-
+        int idTable = 0;
         public void loadTable(int id, string TableName)
         {
             flpListTable.Controls.Clear();
@@ -81,6 +81,7 @@ namespace QuanLyQuanCafe
                 btn.BackgroundImage = Resources.dining_table__2_;
                 btn.ImageAlign = ContentAlignment.MiddleCenter;
                 btn.Tag = item;
+                btn.Name = item.TableID.ToString();
                 btn.Font = new System.Drawing.Font(btn.Font.FontFamily, 10, FontStyle.Bold);
                 flpListTable.Controls.Add(btn);
             }
@@ -132,6 +133,8 @@ namespace QuanLyQuanCafe
             System.Windows.Forms.Button clickedButton = sender as System.Windows.Forms.Button;
             if (clickedButton != null)
             {
+                int index = int.Parse(clickedButton.Name);
+                idTable = index;
                 TableDTO table = clickedButton.Tag as TableDTO;
                 tableClick = table;
                 if (table != null)
@@ -222,6 +225,12 @@ namespace QuanLyQuanCafe
                 {
                     MessageBox.Show("Thanh toán thành công", "Thông báo");
                 }
+                bool check = BillDAO.thanhToan(BillClickID);
+                check = BillDAO.tinhTotal(BillClickID);
+                int id = BillDAO.getBillByTable(idTable);
+                loadListview(id);
+                loadTable(TableDAO.getRoomByName(cbRoom.Text), txtTable.Text);
+
             }
         }
 
@@ -252,8 +261,16 @@ namespace QuanLyQuanCafe
             if (tableClick != null)
             {
                 ListFood listFood = new ListFood(tableClick);
+                listFood.FormClosed += ListFood_FormClosed;
                 listFood.Show();    
             }
+        }
+
+        private void ListFood_FormClosed(object? sender, FormClosedEventArgs e)
+        {
+            int id = BillDAO.getBillByTable(idTable);
+            loadListview(id);
+            loadTable(TableDAO.getRoomByName(cbRoom.Text), txtTable.Text);
         }
     }
 }
