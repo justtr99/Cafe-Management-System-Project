@@ -49,3 +49,106 @@ D:\QuanLyQuanCafe\QuanLyQuanCafe\obj\Debug\net6.0-windows\QuanLyQuanCafe.UpdateF
 D:\QuanLyQuanCafe\QuanLyQuanCafe\obj\Debug\net6.0-windows\QuanLyQuanCafe.ListFood.resources
 D:\QuanLyQuanCafe\QuanLyQuanCafe\obj\Debug\net6.0-windows\QuanLyQuanCafe.sourcelink.json
 D:\QuanLyQuanCafe\QuanLyQuanCafe\obj\Debug\net6.0-windows\QuanLyQuanCafe.Invoice.resources
+C:\Users\Admin\Desktop\Cafe\New folder\Cafe-Management-System-Project\QuanLyQuanCafe\bin\Debug\net6.0-windows\QuanLyQuanCafe.exe
+C:\Users\Admin\Desktop\Cafe\New folder\Cafe-Management-System-Project\QuanLyQuanCafe\bin\Debug\net6.0-windows\appsettings.json
+C:\Users\Admin\Desktop\Cafe\New folder\Cafe-Management-System-Project\QuanLyQuanCafe\bin\Debug\net6.0-windows\QuanLyQuanCafe.dll.config
+C:\Users\Admin\Desktop\Cafe\New folder\Cafe-Management-System-Project\QuanLyQuanCafe\bin\Debug\net6.0-windows\QuanLyQuanCafe.deps.json
+C:\Users\Admin\Desktop\Cafe\New folder\Cafe-Management-System-Project\QuanLyQuanCafe\bin\Debug\net6.0-windows\QuanLyQuanCafe.runtimeconfig.json
+C:\Users\Admin\Desktop\Cafe\New folder\Cafe-Management-System-Project\QuanLyQuanCafe\bin\Debug\net6.0-windows\QuanLyQuanCafe.dll
+C:\Users\Admin\Desktop\Cafe\New folder\Cafe-Management-System-Project\QuanLyQuanCafe\bin\Debug\net6.0-windows\QuanLyQuanCafe.pdb
+C:\Users\Admin\Desktop\Cafe\New folder\Cafe-Management-System-Project\QuanLyQuanCafe\bin\Debug\net6.0-windows\Microsoft.Extensions.Configuration.dll
+C:\Users\Admin\Desktop\Cafe\New folder\Cafe-Management-System-Project\QuanLyQuanCafe\bin\Debug\net6.0-windows\Microsoft.Extensions.Configuration.Abstractions.dll
+C:\Users\Admin\Desktop\Cafe\New folder\Cafe-Management-System-Project\QuanLyQuanCafe\bin\Debug\net6.0-windows\Microsoft.Extensions.Configuration.FileExtensions.dll
+C:\Users\Admin\Desktop\Cafe\New folder\Cafe-Management-System-Project\QuanLyQuanCafe\bin\Debug\net6.0-windows\Microsoft.Extensions.Configuration.Json.dll
+C:\Users\Admin\Desktop\Cafe\New folder\Cafe-Management-System-Project\QuanLyQuanCafe\bin\Debug\net6.0-windows\Microsoft.Extensions.FileProviders.Abstractions.dll
+C:\Users\Admin\Desktop\Cafe\New folder\Cafe-Management-System-Project\QuanLyQuanCafe\bin\Debug\net6.0-windows\Microsoft.Extensions.FileProviders.Physical.dll
+C:\Users\Admin\Desktop\Cafe\New folder\Cafe-Management-System-Project\QuanLyQuanCafe\bin\Debug\net6.0-windows\Microsoft.Extensions.FileSystemGlobbing.dll
+C:\Users\Admin\Desktop\Cafe\New folder\Cafe-Management-System-Project\QuanLyQuanCafe\bin\Debug\net6.0-windows\Microsoft.Extensions.Primitives.dll
+C:\Users\Admin\Desktop\Cafe\New folder\Cafe-Management-System-Project\QuanLyQuanCafe\bin\Debug\net6.0-windows\System.Data.SqlClient.dll
+C:\Users\Admin\Desktop\Cafe\New folder\Cafe-Management-System-Project\QuanLyQuanCafe\bin\Debug\net6.0-windows\System.Text.Encodings.Web.dll
+C:\Users\Admin\Desktop\Cafe\New folder\Cafe-Management-System-Project\QuanLyQuanCafe\bin\Debug\net6.0-windows\System.Text.Json.dll
+C:\Users\Admin\Desktop\Cafe\New folder\Cafe-Management-System-Project\QuanLyQuanCafe\bin\Debug\net6.0-windows\runtimes\win-arm64\native\sni.dll
+C:\Users\Admin\Desktop\Cafe\New folder\Cafe-Management-System-Project\QuanLyQuanCafe\bin\Debug\net6.0-windows\runtimes\win-x64\native\sni.dll
+C:\Users\Admin\Desktop\Cafe\New folder\Cafe-Management-System-Project\QuanLyQuanCafe\bin\Debug\net6.0-windows\runtimes\win-x86\native\sni.dll
+C:\Users\Admin\Desktop\Cafe\New folder\Cafe-Management-System-Project\QuanLyQuanCafe\bin\Debug\net6.0-windows\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\Admin\Desktop\Cafe\New folder\Cafe-Management-System-Project\QuanLyQuanCafe\bin\Debug\net6.0-windows\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\Admin\Desktop\Cafe\New folder\Cafe-Management-System-Project\QuanLyQuanCafe\bin\Debug\net6.0-windows\runtimes\browser\lib\net6.0\System.Text.Encodings.Web.dll
+C:\Users\Admin\Desktop\Cafe\New folder\Cafe-Management-System-Project\QuanLyQuanCafe\bin\Debug\net6.0-windows\Microsoft.Office.Interop.Excel.dll
+C:\Users\Admin\Desktop\Cafe\New folder\Cafe-Management-System-Project\QuanLyQuanCafe\bin\Debug\net6.0-windows\office.dll
+C:\Users\Admin\Desktop\Cafe\New folder\Cafe-Management-System-Project\QuanLyQuanCafe\obj\Debug\net6.0-windows\QuanLyQuanCafe.csproj.AssemblyReference.cache
+C:\Users\Admin\Desktop\Cafe\New folder\Cafe-Management-System-Project\QuanLyQuanCafe\obj\Debug\net6.0-windows\QuanLyQuanCafe.ChangePass.resources
+C:\Users\Admin\Desktop\Cafe\New folder\Cafe-Management-System-Project\QuanLyQuanCafe\obj\Debug\net6.0-windows\QuanLyQuanCafe.Form1.resources
+C:\Users\Admin\Desktop\Cafe\New folder\Cafe-Management-System-Project\QuanLyQuanCafe\obj\Debug\net6.0-windows\QuanLyQuanCafe.HomePage.resources
+C:\Users\Admin\Desktop\Cafe\New folder\Cafe-Management-System-Project\QuanLyQuanCafe\obj\Debug\net6.0-windows\QuanLyQuanCafe.Invoice.resources
+C:\Users\Admin\Desktop\Cafe\New folder\Cafe-Management-System-Project\QuanLyQuanCafe\obj\Debug\net6.0-windows\QuanLyQuanCafe.ListFood.resources
+C:\Users\Admin\Desktop\Cafe\New folder\Cafe-Management-System-Project\QuanLyQuanCafe\obj\Debug\net6.0-windows\QuanLyQuanCafe.OrderForm.resources
+C:\Users\Admin\Desktop\Cafe\New folder\Cafe-Management-System-Project\QuanLyQuanCafe\obj\Debug\net6.0-windows\QuanLyQuanCafe.ProfileForm.resources
+C:\Users\Admin\Desktop\Cafe\New folder\Cafe-Management-System-Project\QuanLyQuanCafe\obj\Debug\net6.0-windows\QuanLyQuanCafe.Properties.Resources.resources
+C:\Users\Admin\Desktop\Cafe\New folder\Cafe-Management-System-Project\QuanLyQuanCafe\obj\Debug\net6.0-windows\QuanLyQuanCafe.Register.resources
+C:\Users\Admin\Desktop\Cafe\New folder\Cafe-Management-System-Project\QuanLyQuanCafe\obj\Debug\net6.0-windows\QuanLyQuanCafe.TableManager.resources
+C:\Users\Admin\Desktop\Cafe\New folder\Cafe-Management-System-Project\QuanLyQuanCafe\obj\Debug\net6.0-windows\QuanLyQuanCafe.UpdateFoodInBill.resources
+C:\Users\Admin\Desktop\Cafe\New folder\Cafe-Management-System-Project\QuanLyQuanCafe\obj\Debug\net6.0-windows\QuanLyQuanCafe.ViewProfile.resources
+C:\Users\Admin\Desktop\Cafe\New folder\Cafe-Management-System-Project\QuanLyQuanCafe\obj\Debug\net6.0-windows\QuanLyQuanCafe.csproj.GenerateResource.cache
+C:\Users\Admin\Desktop\Cafe\New folder\Cafe-Management-System-Project\QuanLyQuanCafe\obj\Debug\net6.0-windows\QuanLyQuanCafe.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Admin\Desktop\Cafe\New folder\Cafe-Management-System-Project\QuanLyQuanCafe\obj\Debug\net6.0-windows\QuanLyQuanCafe.AssemblyInfoInputs.cache
+C:\Users\Admin\Desktop\Cafe\New folder\Cafe-Management-System-Project\QuanLyQuanCafe\obj\Debug\net6.0-windows\QuanLyQuanCafe.AssemblyInfo.cs
+C:\Users\Admin\Desktop\Cafe\New folder\Cafe-Management-System-Project\QuanLyQuanCafe\obj\Debug\net6.0-windows\QuanLyQuanCafe.csproj.CoreCompileInputs.cache
+C:\Users\Admin\Desktop\Cafe\New folder\Cafe-Management-System-Project\QuanLyQuanCafe\obj\Debug\net6.0-windows\QuanLyQuanCafe.sourcelink.json
+C:\Users\Admin\Desktop\Cafe\New folder\Cafe-Management-System-Project\QuanLyQuanCafe\obj\Debug\net6.0-windows\QuanLyQuanCafe.csproj.CopyComplete
+C:\Users\Admin\Desktop\Cafe\New folder\Cafe-Management-System-Project\QuanLyQuanCafe\obj\Debug\net6.0-windows\QuanLyQuanCafe.dll
+C:\Users\Admin\Desktop\Cafe\New folder\Cafe-Management-System-Project\QuanLyQuanCafe\obj\Debug\net6.0-windows\refint\QuanLyQuanCafe.dll
+C:\Users\Admin\Desktop\Cafe\New folder\Cafe-Management-System-Project\QuanLyQuanCafe\obj\Debug\net6.0-windows\QuanLyQuanCafe.pdb
+C:\Users\Admin\Desktop\Cafe\New folder\Cafe-Management-System-Project\QuanLyQuanCafe\obj\Debug\net6.0-windows\QuanLyQuanCafe.genruntimeconfig.cache
+C:\Users\Admin\Desktop\Cafe\New folder\Cafe-Management-System-Project\QuanLyQuanCafe\obj\Debug\net6.0-windows\ref\QuanLyQuanCafe.dll
+C:\Users\Admin\Desktop\Cafe\QuanLyQuanCafe\Cafe-Management-System-Project\QuanLyQuanCafe\obj\Debug\net6.0-windows\QuanLyQuanCafe.csproj.AssemblyReference.cache
+C:\Users\Admin\Desktop\Cafe\QuanLyQuanCafe\Cafe-Management-System-Project\QuanLyQuanCafe\obj\Debug\net6.0-windows\QuanLyQuanCafe.ChangePass.resources
+C:\Users\Admin\Desktop\Cafe\QuanLyQuanCafe\Cafe-Management-System-Project\QuanLyQuanCafe\obj\Debug\net6.0-windows\QuanLyQuanCafe.Form1.resources
+C:\Users\Admin\Desktop\Cafe\QuanLyQuanCafe\Cafe-Management-System-Project\QuanLyQuanCafe\obj\Debug\net6.0-windows\QuanLyQuanCafe.HomePage.resources
+C:\Users\Admin\Desktop\Cafe\QuanLyQuanCafe\Cafe-Management-System-Project\QuanLyQuanCafe\obj\Debug\net6.0-windows\QuanLyQuanCafe.Invoice.resources
+C:\Users\Admin\Desktop\Cafe\QuanLyQuanCafe\Cafe-Management-System-Project\QuanLyQuanCafe\obj\Debug\net6.0-windows\QuanLyQuanCafe.ListFood.resources
+C:\Users\Admin\Desktop\Cafe\QuanLyQuanCafe\Cafe-Management-System-Project\QuanLyQuanCafe\obj\Debug\net6.0-windows\QuanLyQuanCafe.OrderForm.resources
+C:\Users\Admin\Desktop\Cafe\QuanLyQuanCafe\Cafe-Management-System-Project\QuanLyQuanCafe\obj\Debug\net6.0-windows\QuanLyQuanCafe.ProfileForm.resources
+C:\Users\Admin\Desktop\Cafe\QuanLyQuanCafe\Cafe-Management-System-Project\QuanLyQuanCafe\obj\Debug\net6.0-windows\QuanLyQuanCafe.Properties.Resources.resources
+C:\Users\Admin\Desktop\Cafe\QuanLyQuanCafe\Cafe-Management-System-Project\QuanLyQuanCafe\obj\Debug\net6.0-windows\QuanLyQuanCafe.Register.resources
+C:\Users\Admin\Desktop\Cafe\QuanLyQuanCafe\Cafe-Management-System-Project\QuanLyQuanCafe\obj\Debug\net6.0-windows\QuanLyQuanCafe.TableManager.resources
+C:\Users\Admin\Desktop\Cafe\QuanLyQuanCafe\Cafe-Management-System-Project\QuanLyQuanCafe\obj\Debug\net6.0-windows\QuanLyQuanCafe.UpdateFoodInBill.resources
+C:\Users\Admin\Desktop\Cafe\QuanLyQuanCafe\Cafe-Management-System-Project\QuanLyQuanCafe\obj\Debug\net6.0-windows\QuanLyQuanCafe.ViewProfile.resources
+C:\Users\Admin\Desktop\Cafe\QuanLyQuanCafe\Cafe-Management-System-Project\QuanLyQuanCafe\obj\Debug\net6.0-windows\QuanLyQuanCafe.csproj.GenerateResource.cache
+C:\Users\Admin\Desktop\Cafe\QuanLyQuanCafe\Cafe-Management-System-Project\QuanLyQuanCafe\obj\Debug\net6.0-windows\QuanLyQuanCafe.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Admin\Desktop\Cafe\QuanLyQuanCafe\Cafe-Management-System-Project\QuanLyQuanCafe\obj\Debug\net6.0-windows\QuanLyQuanCafe.AssemblyInfoInputs.cache
+C:\Users\Admin\Desktop\Cafe\QuanLyQuanCafe\Cafe-Management-System-Project\QuanLyQuanCafe\obj\Debug\net6.0-windows\QuanLyQuanCafe.AssemblyInfo.cs
+C:\Users\Admin\Desktop\Cafe\QuanLyQuanCafe\Cafe-Management-System-Project\QuanLyQuanCafe\obj\Debug\net6.0-windows\QuanLyQuanCafe.csproj.CoreCompileInputs.cache
+C:\Users\Admin\Desktop\Cafe\QuanLyQuanCafe\Cafe-Management-System-Project\QuanLyQuanCafe\obj\Debug\net6.0-windows\QuanLyQuanCafe.sourcelink.json
+C:\Users\Admin\Desktop\Cafe\QuanLyQuanCafe\Cafe-Management-System-Project\QuanLyQuanCafe\bin\Debug\net6.0-windows\QuanLyQuanCafe.exe
+C:\Users\Admin\Desktop\Cafe\QuanLyQuanCafe\Cafe-Management-System-Project\QuanLyQuanCafe\bin\Debug\net6.0-windows\appsettings.json
+C:\Users\Admin\Desktop\Cafe\QuanLyQuanCafe\Cafe-Management-System-Project\QuanLyQuanCafe\bin\Debug\net6.0-windows\QuanLyQuanCafe.dll.config
+C:\Users\Admin\Desktop\Cafe\QuanLyQuanCafe\Cafe-Management-System-Project\QuanLyQuanCafe\bin\Debug\net6.0-windows\QuanLyQuanCafe.deps.json
+C:\Users\Admin\Desktop\Cafe\QuanLyQuanCafe\Cafe-Management-System-Project\QuanLyQuanCafe\bin\Debug\net6.0-windows\QuanLyQuanCafe.runtimeconfig.json
+C:\Users\Admin\Desktop\Cafe\QuanLyQuanCafe\Cafe-Management-System-Project\QuanLyQuanCafe\bin\Debug\net6.0-windows\QuanLyQuanCafe.dll
+C:\Users\Admin\Desktop\Cafe\QuanLyQuanCafe\Cafe-Management-System-Project\QuanLyQuanCafe\bin\Debug\net6.0-windows\QuanLyQuanCafe.pdb
+C:\Users\Admin\Desktop\Cafe\QuanLyQuanCafe\Cafe-Management-System-Project\QuanLyQuanCafe\bin\Debug\net6.0-windows\Microsoft.Extensions.Configuration.dll
+C:\Users\Admin\Desktop\Cafe\QuanLyQuanCafe\Cafe-Management-System-Project\QuanLyQuanCafe\bin\Debug\net6.0-windows\Microsoft.Extensions.Configuration.Abstractions.dll
+C:\Users\Admin\Desktop\Cafe\QuanLyQuanCafe\Cafe-Management-System-Project\QuanLyQuanCafe\bin\Debug\net6.0-windows\Microsoft.Extensions.Configuration.FileExtensions.dll
+C:\Users\Admin\Desktop\Cafe\QuanLyQuanCafe\Cafe-Management-System-Project\QuanLyQuanCafe\bin\Debug\net6.0-windows\Microsoft.Extensions.Configuration.Json.dll
+C:\Users\Admin\Desktop\Cafe\QuanLyQuanCafe\Cafe-Management-System-Project\QuanLyQuanCafe\bin\Debug\net6.0-windows\Microsoft.Extensions.FileProviders.Abstractions.dll
+C:\Users\Admin\Desktop\Cafe\QuanLyQuanCafe\Cafe-Management-System-Project\QuanLyQuanCafe\bin\Debug\net6.0-windows\Microsoft.Extensions.FileProviders.Physical.dll
+C:\Users\Admin\Desktop\Cafe\QuanLyQuanCafe\Cafe-Management-System-Project\QuanLyQuanCafe\bin\Debug\net6.0-windows\Microsoft.Extensions.FileSystemGlobbing.dll
+C:\Users\Admin\Desktop\Cafe\QuanLyQuanCafe\Cafe-Management-System-Project\QuanLyQuanCafe\bin\Debug\net6.0-windows\Microsoft.Extensions.Primitives.dll
+C:\Users\Admin\Desktop\Cafe\QuanLyQuanCafe\Cafe-Management-System-Project\QuanLyQuanCafe\bin\Debug\net6.0-windows\System.Data.SqlClient.dll
+C:\Users\Admin\Desktop\Cafe\QuanLyQuanCafe\Cafe-Management-System-Project\QuanLyQuanCafe\bin\Debug\net6.0-windows\System.Text.Encodings.Web.dll
+C:\Users\Admin\Desktop\Cafe\QuanLyQuanCafe\Cafe-Management-System-Project\QuanLyQuanCafe\bin\Debug\net6.0-windows\System.Text.Json.dll
+C:\Users\Admin\Desktop\Cafe\QuanLyQuanCafe\Cafe-Management-System-Project\QuanLyQuanCafe\bin\Debug\net6.0-windows\runtimes\win-arm64\native\sni.dll
+C:\Users\Admin\Desktop\Cafe\QuanLyQuanCafe\Cafe-Management-System-Project\QuanLyQuanCafe\bin\Debug\net6.0-windows\runtimes\win-x64\native\sni.dll
+C:\Users\Admin\Desktop\Cafe\QuanLyQuanCafe\Cafe-Management-System-Project\QuanLyQuanCafe\bin\Debug\net6.0-windows\runtimes\win-x86\native\sni.dll
+C:\Users\Admin\Desktop\Cafe\QuanLyQuanCafe\Cafe-Management-System-Project\QuanLyQuanCafe\bin\Debug\net6.0-windows\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\Admin\Desktop\Cafe\QuanLyQuanCafe\Cafe-Management-System-Project\QuanLyQuanCafe\bin\Debug\net6.0-windows\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\Admin\Desktop\Cafe\QuanLyQuanCafe\Cafe-Management-System-Project\QuanLyQuanCafe\bin\Debug\net6.0-windows\runtimes\browser\lib\net6.0\System.Text.Encodings.Web.dll
+C:\Users\Admin\Desktop\Cafe\QuanLyQuanCafe\Cafe-Management-System-Project\QuanLyQuanCafe\bin\Debug\net6.0-windows\Microsoft.Office.Interop.Excel.dll
+C:\Users\Admin\Desktop\Cafe\QuanLyQuanCafe\Cafe-Management-System-Project\QuanLyQuanCafe\bin\Debug\net6.0-windows\office.dll
+C:\Users\Admin\Desktop\Cafe\QuanLyQuanCafe\Cafe-Management-System-Project\QuanLyQuanCafe\obj\Debug\net6.0-windows\QuanLyQuanCafe.csproj.CopyComplete
+C:\Users\Admin\Desktop\Cafe\QuanLyQuanCafe\Cafe-Management-System-Project\QuanLyQuanCafe\obj\Debug\net6.0-windows\QuanLyQuanCafe.dll
+C:\Users\Admin\Desktop\Cafe\QuanLyQuanCafe\Cafe-Management-System-Project\QuanLyQuanCafe\obj\Debug\net6.0-windows\refint\QuanLyQuanCafe.dll
+C:\Users\Admin\Desktop\Cafe\QuanLyQuanCafe\Cafe-Management-System-Project\QuanLyQuanCafe\obj\Debug\net6.0-windows\QuanLyQuanCafe.pdb
+C:\Users\Admin\Desktop\Cafe\QuanLyQuanCafe\Cafe-Management-System-Project\QuanLyQuanCafe\obj\Debug\net6.0-windows\QuanLyQuanCafe.genruntimeconfig.cache
+C:\Users\Admin\Desktop\Cafe\QuanLyQuanCafe\Cafe-Management-System-Project\QuanLyQuanCafe\obj\Debug\net6.0-windows\ref\QuanLyQuanCafe.dll
+C:\Users\Admin\Desktop\Cafe\QuanLyQuanCafe\Cafe-Management-System-Project\QuanLyQuanCafe\obj\Debug\net6.0-windows\QuanLyQuanCafe.ChangeTable.resources

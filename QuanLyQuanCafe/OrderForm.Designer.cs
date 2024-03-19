@@ -40,7 +40,6 @@
             listViewBill = new ListView();
             label4 = new Label();
             richTextBox1 = new RichTextBox();
-            cbDoiRoom = new ComboBox();
             btnChuyenBan = new Button();
             btnThanhToan = new Button();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
@@ -160,7 +159,7 @@
             label4.BackColor = SystemColors.ButtonFace;
             label4.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
             label4.ForeColor = Color.FromArgb(219, 184, 142);
-            label4.Location = new Point(640, 529);
+            label4.Location = new Point(643, 541);
             label4.Name = "label4";
             label4.Size = new Size(108, 28);
             label4.TabIndex = 10;
@@ -172,20 +171,12 @@
             richTextBox1.BorderStyle = BorderStyle.None;
             richTextBox1.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point);
             richTextBox1.ForeColor = Color.FromArgb(219, 184, 142);
-            richTextBox1.Location = new Point(765, 529);
+            richTextBox1.Location = new Point(757, 541);
             richTextBox1.Name = "richTextBox1";
             richTextBox1.ReadOnly = true;
             richTextBox1.Size = new Size(216, 35);
             richTextBox1.TabIndex = 11;
             richTextBox1.Text = "0 đ";
-            // 
-            // cbDoiRoom
-            // 
-            cbDoiRoom.FormattingEnabled = true;
-            cbDoiRoom.Location = new Point(626, 599);
-            cbDoiRoom.Name = "cbDoiRoom";
-            cbDoiRoom.Size = new Size(112, 28);
-            cbDoiRoom.TabIndex = 12;
             // 
             // btnChuyenBan
             // 
@@ -195,7 +186,7 @@
             btnChuyenBan.FlatStyle = FlatStyle.Flat;
             btnChuyenBan.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
             btnChuyenBan.ForeColor = SystemColors.ButtonHighlight;
-            btnChuyenBan.Location = new Point(751, 593);
+            btnChuyenBan.Location = new Point(626, 610);
             btnChuyenBan.Name = "btnChuyenBan";
             btnChuyenBan.Size = new Size(109, 39);
             btnChuyenBan.TabIndex = 13;
@@ -210,7 +201,7 @@
             btnThanhToan.FlatStyle = FlatStyle.Flat;
             btnThanhToan.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
             btnThanhToan.ForeColor = SystemColors.ButtonHighlight;
-            btnThanhToan.Location = new Point(895, 593);
+            btnThanhToan.Location = new Point(905, 610);
             btnThanhToan.Name = "btnThanhToan";
             btnThanhToan.Size = new Size(109, 39);
             btnThanhToan.TabIndex = 14;
@@ -222,10 +213,9 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1008, 623);
+            ClientSize = new Size(1008, 650);
             Controls.Add(btnThanhToan);
             Controls.Add(btnChuyenBan);
-            Controls.Add(cbDoiRoom);
             Controls.Add(richTextBox1);
             Controls.Add(label4);
             Controls.Add(listViewBill);
@@ -260,7 +250,6 @@
         private ListView listViewBill;
         private Label label4;
         private RichTextBox richTextBox1;
-        private ComboBox cbDoiRoom;
         private Button btnChuyenBan;
         private Button btnThanhToan;
     }

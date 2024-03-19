@@ -151,9 +151,9 @@
             // 
             listBillInfo.FullRowSelect = true;
             listBillInfo.GridLines = true;
-            listBillInfo.Location = new Point(724, 121);
+            listBillInfo.Location = new Point(724, 133);
             listBillInfo.Name = "listBillInfo";
-            listBillInfo.Size = new Size(297, 490);
+            listBillInfo.Size = new Size(297, 478);
             listBillInfo.TabIndex = 16;
             listBillInfo.UseCompatibleStateImageBehavior = false;
             listBillInfo.View = View.Details;

@@ -163,7 +163,6 @@ namespace QuanLyQuanCafe
         private void OrderForm_Load(object sender, EventArgs e)
         {
             cbRoom.DataSource = TableDAO.getAllRoomName();
-            cbDoiRoom.DataSource = TableDAO.getAllRoomName();
             loadTable(TableDAO.getRoomByName(cbRoom.Text), txtTable.Text);
         }
 

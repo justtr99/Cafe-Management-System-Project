@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "QGI9NuucLM5DERU6GW/JBOFdNj3j8uBYQXT0V6MhJWwj8T0ys5wYpOPtnqP5Hn9HZRC9jLHlhrnc3lgGfJhWrA==",
+  "dgSpecHash": "QxECrsMp/QM0Er86b2POCuvBMrEPTpXcnMBzagDONhqKREunA3n7lUKRxdLQU0sBi4hfebMCNZqk2XWI3iWp+w==",
   "success": true,
-  "projectFilePath": "D:\\QuanLyQuanCafe\\QuanLyQuanCafe\\QuanLyQuanCafe.csproj",
+  "projectFilePath": "C:\\Users\\Admin\\Desktop\\Cafe\\QuanLyQuanCafe\\Cafe-Management-System-Project\\QuanLyQuanCafe\\QuanLyQuanCafe.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Admin\\.nuget\\packages\\microsoft.extensions.configuration\\8.0.0\\microsoft.extensions.configuration.8.0.0.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\8.0.0\\microsoft.extensions.configuration.abstractions.8.0.0.nupkg.sha512",

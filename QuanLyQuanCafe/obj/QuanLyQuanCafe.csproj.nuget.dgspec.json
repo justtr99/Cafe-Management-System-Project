@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\QuanLyQuanCafe\\QuanLyQuanCafe\\QuanLyQuanCafe.csproj": {}
+    "C:\\Users\\Admin\\Desktop\\Cafe\\QuanLyQuanCafe\\Cafe-Management-System-Project\\QuanLyQuanCafe\\QuanLyQuanCafe.csproj": {}
   },
   "projects": {
-    "D:\\QuanLyQuanCafe\\QuanLyQuanCafe\\QuanLyQuanCafe.csproj": {
+    "C:\\Users\\Admin\\Desktop\\Cafe\\QuanLyQuanCafe\\Cafe-Management-System-Project\\QuanLyQuanCafe\\QuanLyQuanCafe.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\QuanLyQuanCafe\\QuanLyQuanCafe\\QuanLyQuanCafe.csproj",
+        "projectUniqueName": "C:\\Users\\Admin\\Desktop\\Cafe\\QuanLyQuanCafe\\Cafe-Management-System-Project\\QuanLyQuanCafe\\QuanLyQuanCafe.csproj",
         "projectName": "QuanLyQuanCafe",
-        "projectPath": "D:\\QuanLyQuanCafe\\QuanLyQuanCafe\\QuanLyQuanCafe.csproj",
+        "projectPath": "C:\\Users\\Admin\\Desktop\\Cafe\\QuanLyQuanCafe\\Cafe-Management-System-Project\\QuanLyQuanCafe\\QuanLyQuanCafe.csproj",
         "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-        "outputPath": "D:\\QuanLyQuanCafe\\QuanLyQuanCafe\\obj\\",
+        "outputPath": "C:\\Users\\Admin\\Desktop\\Cafe\\QuanLyQuanCafe\\Cafe-Management-System-Project\\QuanLyQuanCafe\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
