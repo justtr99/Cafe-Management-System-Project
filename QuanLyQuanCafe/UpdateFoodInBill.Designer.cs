@@ -118,6 +118,7 @@
             Controls.Add(labelFoodName);
             Controls.Add(label2);
             Controls.Add(label1);
+            MaximizeBox = false;
             Name = "UpdateFoodInBill";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "UpdateFoodInBill";

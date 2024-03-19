@@ -37,15 +37,18 @@
             Page = new Label();
             btnNext = new Button();
             btnBefore = new Button();
+            listBillInfo = new ListView();
+            label1 = new Label();
+            btnExportBill = new Button();
             SuspendLayout();
             // 
             // flpListTable
             // 
             flpListTable.AutoScroll = true;
             flpListTable.BackColor = Color.FromArgb(239, 226, 211);
-            flpListTable.Location = new Point(12, 75);
+            flpListTable.Location = new Point(4, 75);
             flpListTable.Name = "flpListTable";
-            flpListTable.Size = new Size(695, 536);
+            flpListTable.Size = new Size(703, 536);
             flpListTable.TabIndex = 1;
             // 
             // btnThongke
@@ -81,7 +84,7 @@
             label20.AutoSize = true;
             label20.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
             label20.ForeColor = Color.FromArgb(219, 184, 142);
-            label20.Location = new Point(12, 26);
+            label20.Location = new Point(0, 24);
             label20.Name = "label20";
             label20.Size = new Size(77, 23);
             label20.TabIndex = 9;
@@ -98,7 +101,7 @@
             // dateStart
             // 
             dateStart.Format = DateTimePickerFormat.Short;
-            dateStart.Location = new Point(95, 25);
+            dateStart.Location = new Point(83, 23);
             dateStart.Name = "dateStart";
             dateStart.Size = new Size(127, 27);
             dateStart.TabIndex = 7;
@@ -108,7 +111,7 @@
             Page.AutoSize = true;
             Page.BackColor = Color.FromArgb(219, 184, 142);
             Page.ForeColor = SystemColors.ButtonHighlight;
-            Page.Location = new Point(581, 632);
+            Page.Location = new Point(581, 631);
             Page.Name = "Page";
             Page.Size = new Size(31, 20);
             Page.TabIndex = 15;
@@ -121,7 +124,7 @@
             btnNext.FlatAppearance.BorderSize = 0;
             btnNext.FlatStyle = FlatStyle.Flat;
             btnNext.ForeColor = SystemColors.ButtonHighlight;
-            btnNext.Location = new Point(624, 628);
+            btnNext.Location = new Point(624, 627);
             btnNext.Name = "btnNext";
             btnNext.Size = new Size(58, 29);
             btnNext.TabIndex = 14;
@@ -136,7 +139,7 @@
             btnBefore.FlatAppearance.BorderSize = 0;
             btnBefore.FlatStyle = FlatStyle.Flat;
             btnBefore.ForeColor = SystemColors.ButtonHighlight;
-            btnBefore.Location = new Point(512, 628);
+            btnBefore.Location = new Point(512, 627);
             btnBefore.Name = "btnBefore";
             btnBefore.Size = new Size(58, 29);
             btnBefore.TabIndex = 13;
@@ -144,11 +147,52 @@
             btnBefore.UseVisualStyleBackColor = false;
             btnBefore.Click += btnBefore_Click_1;
             // 
+            // listBillInfo
+            // 
+            listBillInfo.FullRowSelect = true;
+            listBillInfo.GridLines = true;
+            listBillInfo.Location = new Point(724, 121);
+            listBillInfo.Name = "listBillInfo";
+            listBillInfo.Size = new Size(297, 490);
+            listBillInfo.TabIndex = 16;
+            listBillInfo.UseCompatibleStateImageBehavior = false;
+            listBillInfo.View = View.Details;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Segoe UI Semibold", 10.8F, FontStyle.Bold, GraphicsUnit.Point);
+            label1.ForeColor = Color.FromArgb(219, 184, 142);
+            label1.Location = new Point(724, 75);
+            label1.Name = "label1";
+            label1.Size = new Size(166, 25);
+            label1.TabIndex = 17;
+            label1.Text = "Thông tin hóa đơn";
+            // 
+            // btnExportBill
+            // 
+            btnExportBill.BackColor = Color.FromArgb(219, 184, 142);
+            btnExportBill.Cursor = Cursors.Hand;
+            btnExportBill.FlatAppearance.BorderSize = 0;
+            btnExportBill.FlatStyle = FlatStyle.Flat;
+            btnExportBill.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            btnExportBill.ForeColor = SystemColors.ButtonHighlight;
+            btnExportBill.Location = new Point(921, 69);
+            btnExportBill.Name = "btnExportBill";
+            btnExportBill.Size = new Size(100, 40);
+            btnExportBill.TabIndex = 18;
+            btnExportBill.Text = "In hóa đơn";
+            btnExportBill.UseVisualStyleBackColor = false;
+            btnExportBill.Click += btnExportBill_Click;
+            // 
             // Invoice
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1008, 650);
+            Controls.Add(btnExportBill);
+            Controls.Add(label1);
+            Controls.Add(listBillInfo);
             Controls.Add(Page);
             Controls.Add(btnNext);
             Controls.Add(btnBefore);
@@ -176,5 +220,8 @@
         private Label Page;
         private Button btnNext;
         private Button btnBefore;
+        private ListView listBillInfo;
+        private Label label1;
+        private Button btnExportBill;
     }
 }

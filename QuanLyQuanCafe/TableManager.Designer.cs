@@ -1107,6 +1107,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1124, 631);
             Controls.Add(tpManager);
+            MaximizeBox = false;
             Name = "TableManager";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Table Manager";

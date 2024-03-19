@@ -96,6 +96,7 @@
             Controls.Add(labelUsername);
             Controls.Add(lebelFullName);
             Controls.Add(pictureBox1);
+            MaximizeBox = false;
             Name = "ViewProfile";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "ViewProfile";

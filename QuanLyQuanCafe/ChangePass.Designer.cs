@@ -172,6 +172,7 @@
             Controls.Add(label1);
             Controls.Add(pictureBox1);
             ForeColor = SystemColors.ButtonHighlight;
+            MaximizeBox = false;
             Name = "ChangePass";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "ChangePass";

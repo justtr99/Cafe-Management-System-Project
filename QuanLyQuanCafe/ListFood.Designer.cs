@@ -149,7 +149,9 @@
             Controls.Add(label3);
             Controls.Add(label2);
             Controls.Add(flowLayoutPanel1);
+            MaximizeBox = false;
             Name = "ListFood";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "ListFood";
             Load += ListFood_Load;
             ResumeLayout(false);

@@ -211,6 +211,7 @@
             ClientSize = new Size(1245, 674);
             Controls.Add(panelManager);
             Controls.Add(panel2);
+            MaximizeBox = false;
             Name = "HomePage";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "HomePage";
