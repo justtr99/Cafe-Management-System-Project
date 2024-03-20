@@ -34,6 +34,7 @@
             label3 = new Label();
             cbRoom = new ComboBox();
             txtTable = new TextBox();
+            btnChangeTable = new Button();
             SuspendLayout();
             // 
             // flpListTable
@@ -50,7 +51,7 @@
             label1.BackColor = SystemColors.ButtonFace;
             label1.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
             label1.ForeColor = Color.FromArgb(219, 184, 142);
-            label1.Location = new Point(424, 18);
+            label1.Location = new Point(438, 19);
             label1.Name = "label1";
             label1.Size = new Size(98, 31);
             label1.TabIndex = 2;
@@ -96,11 +97,28 @@
             txtTable.TabIndex = 6;
             txtTable.TextChanged += txtTable_TextChanged;
             // 
+            // btnChangeTable
+            // 
+            btnChangeTable.BackColor = Color.FromArgb(219, 184, 142);
+            btnChangeTable.Cursor = Cursors.Hand;
+            btnChangeTable.FlatAppearance.BorderSize = 0;
+            btnChangeTable.FlatStyle = FlatStyle.Flat;
+            btnChangeTable.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
+            btnChangeTable.ForeColor = SystemColors.ButtonHighlight;
+            btnChangeTable.Location = new Point(438, 584);
+            btnChangeTable.Name = "btnChangeTable";
+            btnChangeTable.Size = new Size(112, 39);
+            btnChangeTable.TabIndex = 9;
+            btnChangeTable.Text = "Xác nhận";
+            btnChangeTable.UseVisualStyleBackColor = false;
+            btnChangeTable.Click += btnChangeTable_Click;
+            // 
             // ChangeTable
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1008, 650);
+            Controls.Add(btnChangeTable);
             Controls.Add(txtTable);
             Controls.Add(cbRoom);
             Controls.Add(label3);
@@ -123,5 +141,6 @@
         private Label label3;
         private ComboBox cbRoom;
         private TextBox txtTable;
+        private Button btnChangeTable;
     }
 }

@@ -66,38 +66,42 @@ namespace QuanLyQuanCafe.DAO
             return list;
 
         }
-        public static bool insertFood(string name,float price,int FoodType,int Quantity)
+        public static bool insertFood(string name,float price,int FoodType,int Quantity,string linkImg)
         {
-            string sql = "insert into Food values (@Name,@Price,@FoodType,@Quantity)";
+            string sql = "insert into Food values (@Name,@Price,@FoodType,@Quantity,@img)";
             SqlParameter parameter1 = new SqlParameter("@Name", DbType.String),
                 parameter2 = new SqlParameter("@Price", SqlDbType.Float),
                 parameter3 = new SqlParameter("@FoodType", DbType.Int32),
-                parameter4 = new SqlParameter("@Quantity", DbType.Int32);
+                parameter4 = new SqlParameter("@Quantity", DbType.Int32),
+                parameter5 = new SqlParameter("@img", DbType.String);
             parameter1.Value = name;
             parameter2.Value = price;
             parameter3.Value = FoodType;
-            parameter4.Value = Quantity;    
-            int count = DBContext.ExecuteBySql(sql,parameter1,parameter2,parameter3,parameter4);
+            parameter4.Value = Quantity; 
+            parameter5.Value = linkImg;
+            int count = DBContext.ExecuteBySql(sql,parameter1,parameter2,parameter3,parameter4,parameter5);
             if(count>0)
                 return true;
             return false;
         }
-        public static bool updateFood(int id,string name,float price,int type,int AddQuantity)
+        public static bool updateFood(int id,string name,float price,int type,int AddQuantity,string img)
         {
             string sql = "update Food "+
-                "set FoodName = @FoodName, FoodPrice = @FoodPrice, FoodCategoryID = @FoodType, Quantity += @AddQuantity "
+                "set FoodName = @FoodName, FoodPrice = @FoodPrice, FoodCategoryID = @FoodType, Quantity += @AddQuantity, ImageLink = @img "
                 + "where FoodID = @FoodID";
             SqlParameter parameter1 = new SqlParameter("@FoodName", DbType.String),
                 parameter2 = new SqlParameter("@FoodPrice", SqlDbType.Float),
                 parameter3 = new SqlParameter("@FoodType", DbType.Int32),
                 parameter4 = new SqlParameter("@AddQuantity", DbType.Int32),
-                parameter5 = new SqlParameter("@FoodID",DbType.Int32);
+                parameter5 = new SqlParameter("@FoodID", DbType.Int32),
+                parameter6 = new SqlParameter("@img", DbType.String);
             parameter1.Value = name;
             parameter2.Value = price;
             parameter3.Value = type;
             parameter4.Value = AddQuantity;
             parameter5.Value = id;
-            int count = DBContext.ExecuteBySql(sql, parameter1, parameter2, parameter3, parameter4,parameter5);
+            parameter6.Value = img;
+            int count = DBContext.ExecuteBySql(sql, parameter1, parameter2, parameter3, parameter4,parameter5, parameter6);
             if(count>0) return true;
             return false;
         }

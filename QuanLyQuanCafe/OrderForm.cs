@@ -263,6 +263,10 @@ namespace QuanLyQuanCafe
                 listFood.FormClosed += ListFood_FormClosed;
                 listFood.Show();
             }
+            else
+            {
+                MessageBox.Show("Chưa chọn bàn","Thông báo");
+            }
         }
 
         private void ListFood_FormClosed(object? sender, FormClosedEventArgs e)
@@ -281,10 +285,18 @@ namespace QuanLyQuanCafe
                 if (checkBill != null)
                 {
                     ChangeTable changeTable = new ChangeTable(idTable);
+                    changeTable.FormClosed += changeTable_FormClosed;
                     changeTable.Show();
                 }else MessageBox.Show("Bàn trống không thể chuyển bàn", "Thông báo");
             }
             else MessageBox.Show("Vui lòng chọn bàn muốn chuyển", "Thông báo");
+        }
+
+        private void changeTable_FormClosed(object? sender, FormClosedEventArgs e)
+        {
+            int id = BillDAO.getBillByTable(idTable);
+            loadListview(id);
+            loadTable(TableDAO.getRoomByName(cbRoom.Text), txtTable.Text);
         }
     }
 }

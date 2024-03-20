@@ -113,13 +113,13 @@ namespace QuanLyQuanCafe
                         bool check = AccountDAO.updateAccount(UsernameNow, textUsername.Text, textPassword.Text, textName.Text, textPhone.Text);
                         if (check)
                         {
-                            MessageBox.Show("Sửa thành công");
+                            MessageBox.Show("Sửa thành công", "Thông báo");
                         }
-                        else { MessageBox.Show("Sửa không thành công"); }
+                        else { MessageBox.Show("Sửa không thành công", "Thông báo"); }
                     }
                     else
                     {
-                        MessageBox.Show("Sửa không thành công");
+                        MessageBox.Show("Sửa không thành công", "Thông báo");
                     }
                 }
                 catch (Exception ex)
@@ -140,7 +140,7 @@ namespace QuanLyQuanCafe
                     bool check = AccountDAO.deleteAccount(UsernameNow);
                     if (check)
                     {
-                        MessageBox.Show("Xóa thành công");
+                        MessageBox.Show("Xóa thành công", "Thông báo");
                         dgvAccount.DataSource = AccountDAO.getAllAccount();
                         for (int i = 5; i < dgvAccount.Columns.Count; i++)
                         {
@@ -149,7 +149,7 @@ namespace QuanLyQuanCafe
                     }
                     else
                     {
-                        MessageBox.Show("Xóa không thành công thành công");
+                        MessageBox.Show("Xóa không thành công thành công", "Thông báo");
 
                     }
                 }
@@ -271,9 +271,9 @@ namespace QuanLyQuanCafe
             {
                 if (countError == 0)
                 {
-                    bool check = FoodDAO.insertFood(textFoodName.Text, float.Parse(textFoodPrice.Text), type, (int)numberQuantity.Value);
-                    if (check) { MessageBox.Show("Thêm thành công"); }
-                    else { MessageBox.Show("Thêm không thành công"); }
+                    bool check = FoodDAO.insertFood(textFoodName.Text, float.Parse(textFoodPrice.Text), type, (int)numberQuantity.Value, txtLinkImg.Text);
+                    if (check) { MessageBox.Show("Thêm thành công", "Thông báo"); }
+                    else { MessageBox.Show("Thêm không thành công", "Thông báo"); }
                 }
 
             }
@@ -327,12 +327,12 @@ namespace QuanLyQuanCafe
                 {
                     if (countError == 0)
                     {
-                        bool check = FoodDAO.updateFood(int.Parse(textFoodID.Text), textFoodName.Text, float.Parse(textFoodPrice.Text), type, (int)numberAddQuantity.Value);
-                        if (check) { MessageBox.Show("Sửa thành công"); }
-                        else { MessageBox.Show("Sửa thất bại"); }
+                        bool check = FoodDAO.updateFood(int.Parse(textFoodID.Text), textFoodName.Text, float.Parse(textFoodPrice.Text), type, (int)numberAddQuantity.Value,txtLinkImg.Text);
+                        if (check) { MessageBox.Show("Sửa thành công","Thông báo"); }
+                        else { MessageBox.Show("Sửa thất bại", "Thông báo"); }
                     }
                 }
-                catch (Exception ex) { MessageBox.Show("Tên đồ ăn trùng lặp vui lòng nhập lại"); }
+                catch (Exception ex) { MessageBox.Show("Tên đồ ăn trùng lặp vui lòng nhập lại", "Thông báo"); }
                 LoadDgvFood();
             }
         }
@@ -350,8 +350,8 @@ namespace QuanLyQuanCafe
                 else
                 {
                     bool check = FoodDAO.deleteFood(int.Parse(textFoodID.Text));
-                    if (check) { MessageBox.Show("Xóa thành công"); }
-                    else { MessageBox.Show("Xóa thất bại"); }
+                    if (check) { MessageBox.Show("Xóa thành công", "Thông báo"); }
+                    else { MessageBox.Show("Xóa thất bại", "Thông báo"); }
                 }
                 LoadDgvFood();
             }
@@ -710,6 +710,11 @@ namespace QuanLyQuanCafe
         }
 
         private void cbSearchRoomName_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dgvBill_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }

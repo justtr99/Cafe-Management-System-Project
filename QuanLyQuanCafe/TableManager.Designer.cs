@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle5 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle6 = new DataGridViewCellStyle();
             tpManager = new TabControl();
             tpDoanhThu = new TabPage();
             txtdoanhThu = new Label();
@@ -74,6 +74,8 @@
             textSearchName = new TextBox();
             label8 = new Label();
             groupBox1 = new GroupBox();
+            txtLinkImg = new TextBox();
+            label24 = new Label();
             errorFoodID = new Label();
             textFoodID = new TextBox();
             label14 = new Label();
@@ -286,37 +288,38 @@
             // dgvBill
             // 
             dgvBill.BackgroundColor = SystemColors.AppWorkspace;
-            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = SystemColors.Control;
-            dataGridViewCellStyle1.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            dataGridViewCellStyle1.ForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
-            dgvBill.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = SystemColors.Control;
+            dataGridViewCellStyle4.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle4.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = DataGridViewTriState.True;
+            dgvBill.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
             dgvBill.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = SystemColors.Window;
-            dataGridViewCellStyle2.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            dataGridViewCellStyle2.ForeColor = SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.False;
-            dgvBill.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle5.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = SystemColors.Window;
+            dataGridViewCellStyle5.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle5.ForeColor = SystemColors.ControlText;
+            dataGridViewCellStyle5.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = DataGridViewTriState.False;
+            dgvBill.DefaultCellStyle = dataGridViewCellStyle5;
             dgvBill.Location = new Point(3, 66);
             dgvBill.Name = "dgvBill";
-            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = SystemColors.Control;
-            dataGridViewCellStyle3.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            dataGridViewCellStyle3.ForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.True;
-            dgvBill.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle6.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = SystemColors.Control;
+            dataGridViewCellStyle6.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle6.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle6.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = DataGridViewTriState.True;
+            dgvBill.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
             dgvBill.RowHeadersWidth = 51;
             dgvBill.RowTemplate.Height = 29;
             dgvBill.Size = new Size(695, 478);
             dgvBill.TabIndex = 3;
+            dgvBill.CellContentClick += dgvBill_CellContentClick;
             dgvBill.CellDoubleClick += dgvBill_CellDoubleClick;
             // 
             // dateEnd
@@ -628,6 +631,8 @@
             // 
             // groupBox1
             // 
+            groupBox1.Controls.Add(txtLinkImg);
+            groupBox1.Controls.Add(label24);
             groupBox1.Controls.Add(errorFoodID);
             groupBox1.Controls.Add(textFoodID);
             groupBox1.Controls.Add(label14);
@@ -654,19 +659,36 @@
             groupBox1.TabStop = false;
             groupBox1.Text = "Thông tin chi tiết";
             // 
+            // txtLinkImg
+            // 
+            txtLinkImg.Location = new Point(151, 434);
+            txtLinkImg.Name = "txtLinkImg";
+            txtLinkImg.Size = new Size(239, 31);
+            txtLinkImg.TabIndex = 23;
+            // 
+            // label24
+            // 
+            label24.AutoSize = true;
+            label24.Font = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point);
+            label24.Location = new Point(40, 432);
+            label24.Name = "label24";
+            label24.Size = new Size(104, 31);
+            label24.TabIndex = 22;
+            label24.Text = "Link ảnh:";
+            // 
             // errorFoodID
             // 
             errorFoodID.AutoSize = true;
             errorFoodID.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point);
             errorFoodID.ForeColor = Color.Red;
-            errorFoodID.Location = new Point(151, 76);
+            errorFoodID.Location = new Point(151, 64);
             errorFoodID.Name = "errorFoodID";
             errorFoodID.Size = new Size(0, 23);
             errorFoodID.TabIndex = 21;
             // 
             // textFoodID
             // 
-            textFoodID.Location = new Point(150, 42);
+            textFoodID.Location = new Point(150, 30);
             textFoodID.Name = "textFoodID";
             textFoodID.ReadOnly = true;
             textFoodID.Size = new Size(239, 31);
@@ -676,7 +698,7 @@
             // 
             label14.AutoSize = true;
             label14.Font = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point);
-            label14.Location = new Point(103, 40);
+            label14.Location = new Point(103, 28);
             label14.Name = "label14";
             label14.Size = new Size(41, 31);
             label14.TabIndex = 19;
@@ -687,7 +709,7 @@
             errorFoodAddQuantity.AutoSize = true;
             errorFoodAddQuantity.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point);
             errorFoodAddQuantity.ForeColor = Color.Red;
-            errorFoodAddQuantity.Location = new Point(150, 420);
+            errorFoodAddQuantity.Location = new Point(150, 408);
             errorFoodAddQuantity.Name = "errorFoodAddQuantity";
             errorFoodAddQuantity.Size = new Size(0, 23);
             errorFoodAddQuantity.TabIndex = 18;
@@ -697,7 +719,7 @@
             errorFoodQuantity.AutoSize = true;
             errorFoodQuantity.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point);
             errorFoodQuantity.ForeColor = Color.Red;
-            errorFoodQuantity.Location = new Point(150, 345);
+            errorFoodQuantity.Location = new Point(150, 333);
             errorFoodQuantity.Name = "errorFoodQuantity";
             errorFoodQuantity.Size = new Size(0, 23);
             errorFoodQuantity.TabIndex = 17;
@@ -707,7 +729,7 @@
             errorFoodType.AutoSize = true;
             errorFoodType.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point);
             errorFoodType.ForeColor = Color.Red;
-            errorFoodType.Location = new Point(150, 279);
+            errorFoodType.Location = new Point(150, 267);
             errorFoodType.Name = "errorFoodType";
             errorFoodType.Size = new Size(0, 23);
             errorFoodType.TabIndex = 16;
@@ -717,7 +739,7 @@
             errorFoodPrice.AutoSize = true;
             errorFoodPrice.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point);
             errorFoodPrice.ForeColor = Color.Red;
-            errorFoodPrice.Location = new Point(150, 210);
+            errorFoodPrice.Location = new Point(150, 198);
             errorFoodPrice.Name = "errorFoodPrice";
             errorFoodPrice.Size = new Size(0, 23);
             errorFoodPrice.TabIndex = 15;
@@ -727,28 +749,28 @@
             errorFoodName.AutoSize = true;
             errorFoodName.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point);
             errorFoodName.ForeColor = Color.Red;
-            errorFoodName.Location = new Point(150, 138);
+            errorFoodName.Location = new Point(150, 126);
             errorFoodName.Name = "errorFoodName";
             errorFoodName.Size = new Size(0, 23);
             errorFoodName.TabIndex = 14;
             // 
             // textFoodPrice
             // 
-            textFoodPrice.Location = new Point(150, 176);
+            textFoodPrice.Location = new Point(150, 164);
             textFoodPrice.Name = "textFoodPrice";
             textFoodPrice.Size = new Size(239, 31);
             textFoodPrice.TabIndex = 6;
             // 
             // numberQuantity
             // 
-            numberQuantity.Location = new Point(150, 314);
+            numberQuantity.Location = new Point(150, 302);
             numberQuantity.Name = "numberQuantity";
             numberQuantity.Size = new Size(239, 31);
             numberQuantity.TabIndex = 13;
             // 
             // numberAddQuantity
             // 
-            numberAddQuantity.Location = new Point(150, 386);
+            numberAddQuantity.Location = new Point(150, 374);
             numberAddQuantity.Name = "numberAddQuantity";
             numberAddQuantity.Size = new Size(239, 31);
             numberAddQuantity.TabIndex = 12;
@@ -757,14 +779,14 @@
             // 
             cbFoodType.FormattingEnabled = true;
             cbFoodType.Items.AddRange(new object[] { "Đồ ăn", "Đồ uống" });
-            cbFoodType.Location = new Point(150, 243);
+            cbFoodType.Location = new Point(150, 231);
             cbFoodType.Name = "cbFoodType";
             cbFoodType.Size = new Size(239, 33);
             cbFoodType.TabIndex = 10;
             // 
             // textFoodName
             // 
-            textFoodName.Location = new Point(150, 104);
+            textFoodName.Location = new Point(150, 92);
             textFoodName.Name = "textFoodName";
             textFoodName.Size = new Size(239, 31);
             textFoodName.TabIndex = 5;
@@ -773,7 +795,7 @@
             // 
             label13.AutoSize = true;
             label13.Font = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point);
-            label13.Location = new Point(17, 383);
+            label13.Location = new Point(17, 371);
             label13.Name = "label13";
             label13.Size = new Size(134, 31);
             label13.TabIndex = 4;
@@ -783,7 +805,7 @@
             // 
             label12.AutoSize = true;
             label12.Font = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point);
-            label12.Location = new Point(34, 314);
+            label12.Location = new Point(34, 302);
             label12.Name = "label12";
             label12.Size = new Size(117, 31);
             label12.TabIndex = 3;
@@ -793,7 +815,7 @@
             // 
             label11.AutoSize = true;
             label11.Font = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point);
-            label11.Location = new Point(26, 245);
+            label11.Location = new Point(26, 233);
             label11.Name = "label11";
             label11.Size = new Size(125, 31);
             label11.TabIndex = 2;
@@ -803,7 +825,7 @@
             // 
             label10.AutoSize = true;
             label10.Font = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point);
-            label10.Location = new Point(91, 176);
+            label10.Location = new Point(91, 164);
             label10.Name = "label10";
             label10.Size = new Size(53, 31);
             label10.TabIndex = 1;
@@ -813,7 +835,7 @@
             // 
             label9.AutoSize = true;
             label9.Font = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point);
-            label9.Location = new Point(26, 104);
+            label9.Location = new Point(26, 92);
             label9.Name = "label9";
             label9.Size = new Size(118, 31);
             label9.TabIndex = 0;
@@ -1224,5 +1246,7 @@
         private Label Page;
         private Label label23;
         private Label txtdoanhThu;
+        private TextBox txtLinkImg;
+        private Label label24;
     }
 }

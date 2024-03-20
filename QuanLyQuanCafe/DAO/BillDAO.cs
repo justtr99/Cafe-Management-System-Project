@@ -245,6 +245,20 @@ namespace QuanLyQuanCafe.DAO
             if (count > 0) { return true; }
             return false;
         }
+        public static bool changeTable(int oldTable, int newTable)
+        {
+            string sql = "update Bill "
+                + "set TableID = @new "
+                + "where TableID = @old and BillStatus = N'Chưa thanh toán' ";
+            SqlParameter parameter1 = new SqlParameter("@new", DbType.Int32),
+                parameter2 = new SqlParameter("@old", DbType.Int32);
+            parameter1.Value = newTable;
+            parameter2.Value = oldTable;
+            int count = DBContext.ExecuteBySql(sql, parameter1, parameter2);
+            if (count > 0) { return true; }
+
+            return false;
+        }
 
     }
 }

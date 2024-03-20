@@ -45,7 +45,7 @@
             flowLayoutPanel1.BackColor = Color.White;
             flowLayoutPanel1.Location = new Point(28, 165);
             flowLayoutPanel1.Name = "flowLayoutPanel1";
-            flowLayoutPanel1.Size = new Size(675, 456);
+            flowLayoutPanel1.Size = new Size(723, 456);
             flowLayoutPanel1.TabIndex = 0;
             flowLayoutPanel1.Paint += flowLayoutPanel1_Paint;
             // 
@@ -103,7 +103,7 @@
             // listViewOrder
             // 
             listViewOrder.GridLines = true;
-            listViewOrder.Location = new Point(738, 165);
+            listViewOrder.Location = new Point(763, 165);
             listViewOrder.Name = "listViewOrder";
             listViewOrder.Size = new Size(374, 412);
             listViewOrder.TabIndex = 7;
@@ -115,7 +115,7 @@
             button1.BackColor = Color.White;
             button1.FlatAppearance.BorderSize = 0;
             button1.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            button1.Location = new Point(871, 583);
+            button1.Location = new Point(896, 583);
             button1.Name = "button1";
             button1.Size = new Size(137, 38);
             button1.TabIndex = 8;
@@ -128,7 +128,7 @@
             label4.AutoSize = true;
             label4.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
             label4.ForeColor = Color.White;
-            label4.Location = new Point(732, 122);
+            label4.Location = new Point(757, 122);
             label4.Name = "label4";
             label4.Size = new Size(161, 28);
             label4.TabIndex = 9;
