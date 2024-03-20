@@ -1,4 +1,5 @@
-﻿using Microsoft.Office.Interop.Excel;
+﻿using CreateQRCode;
+using Microsoft.Office.Interop.Excel;
 using Newtonsoft.Json;
 using QuanLyCafe.DAO;
 using QuanLyCafe.Del;
@@ -6,6 +7,7 @@ using QuanLyCafe.Models;
 using QuanLyQuanCafe.DAO;
 using QuanLyQuanCafe.Models;
 using QuanLyQuanCafe.PayQR;
+using RestSharp;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -720,28 +722,110 @@ namespace QuanLyQuanCafe
 
         }
 
-        private void cbSearchRoomName_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void dgvBill_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
+       
 
         //
 
 
         //Page QR
 
-        private void btnCheck_Click(object sender, EventArgs e)
+        public void resetError()
         {
-
+            errorNganHang.Text = "";
+            errorStk.Text = "";
+            errorTenTk.Text = "";
+            errorTemplate.Text = "";
         }
 
+        private void btnCheck_Click(object sender, EventArgs e)
+        {
+            resetError(); 
+            QRDTO QR = QRDAO.getQR();
+            if (QR.Stk.Length > 0 && QR.TenTk.Length > 0 && QR.nganHang.Length > 0 && QR.Template.Length > 0)
+            {
+                string[] nganHang = QR.nganHang.Split(" ");
 
+                var apiRequest = new ApiRequest();
+                apiRequest.acqId = Convert.ToInt32(nganHang[0]);
+                apiRequest.accountNo = long.Parse(QR.Stk);
+                apiRequest.accountName = QR.TenTk;
+                apiRequest.amount = Convert.ToInt32("0");
+                apiRequest.format = "text";
+                apiRequest.template = QR.Template;
+                var jsonRequest = JsonConvert.SerializeObject(apiRequest);
+                // use restsharp for request api.
+                var client = new RestClient("https://api.vietqr.io/v2/generate");
+                var request = new RestRequest();
+
+                request.Method = Method.Post;
+                request.AddHeader("Accept", "application/json");
+
+                request.AddParameter("application/json", jsonRequest, ParameterType.RequestBody);
+
+                var response = client.Execute(request);
+                var content = response.Content;
+                var dataResult = JsonConvert.DeserializeObject<ApiResponse>(content);
+
+
+                var image = Base64ToImage(dataResult.data.qrDataURL.Replace("data:image/png;base64,", ""));
+                pictureBox1.Image = image;
+            }
+            else
+            {
+                MessageBox.Show("QR chưa đúng vui lòng update", "Thông báo");
+            }
+        }
+
+        public Image Base64ToImage(string base64String)
+        {
+            byte[] imageBytes = Convert.FromBase64String(base64String);
+            MemoryStream ms = new MemoryStream(imageBytes, 0, imageBytes.Length);
+            ms.Write(imageBytes, 0, imageBytes.Length);
+            System.Drawing.Image image = System.Drawing.Image.FromStream(ms, true);
+            return image;
+        }
+
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+            resetError();
+            int counrError = 0;
+            if (cb_nganhang.Text.Length <= 0)
+            {
+                errorNganHang.Text = "Ngân hàng không được trống";
+                counrError = 1;
+            }
+            if (txtSTK.Text.Length <= 0)
+            {
+                errorStk.Text = "STK không được trống";
+                counrError = 1;
+            }
+            if (cb_template.Text.Length <= 0)
+            {
+                errorTemplate.Text = "Template không được trống";
+                counrError = 1;
+            }
+            if (txtTenTaiKhoan.Text.Length <= 0)
+            {
+                errorTenTk.Text = "Tên tk không được trống";
+                counrError = 1;
+            }
+
+            if (counrError == 0)
+            {
+
+                bool check = QRDAO.updateQR(cb_nganhang.Text, txtSTK.Text, cb_template.Text, txtTenTaiKhoan.Text, txtInfo.Text);
+                if (check)
+                {
+                    MessageBox.Show("Update thành công", "Thông báo");
+                }
+                else
+                {
+                    MessageBox.Show("Update thất bại", "Thông báo");
+                }
+            }
+        }
+
+        
         //
     }
 }
