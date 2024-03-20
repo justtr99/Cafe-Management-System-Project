@@ -108,6 +108,7 @@
             Controls.Add(label1);
             Controls.Add(flpListTable);
             Name = "ChangeTable";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "ChangeTable";
             Load += ChangeTable_Load;
             ResumeLayout(false);

@@ -192,6 +192,7 @@
             btnChuyenBan.TabIndex = 13;
             btnChuyenBan.Text = "Chuyển bàn";
             btnChuyenBan.UseVisualStyleBackColor = false;
+            btnChuyenBan.Click += btnChuyenBan_Click;
             // 
             // btnThanhToan
             // 

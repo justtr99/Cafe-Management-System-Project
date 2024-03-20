@@ -63,11 +63,11 @@ namespace QuanLyQuanCafe
             {
                 System.Windows.Forms.Button btn = new System.Windows.Forms.Button { Width = TableDAO.TableWidth - 20, Height = TableDAO.TableHeight - 20 };
                 BillDTO checkBill = BillDAO.checkBillByTable(item.TableID);
-                
+
                 if (checkBill != null)
                 {
                     btn.BackColor = Color.FromArgb(128, 247, 113);
-                    
+
                     btn.Text = item.TableName + Environment.NewLine + "\n" + "Đã có người";
                 }
                 else
@@ -261,7 +261,7 @@ namespace QuanLyQuanCafe
             {
                 ListFood listFood = new ListFood(tableClick);
                 listFood.FormClosed += ListFood_FormClosed;
-                listFood.Show();    
+                listFood.Show();
             }
         }
 
@@ -270,6 +270,21 @@ namespace QuanLyQuanCafe
             int id = BillDAO.getBillByTable(idTable);
             loadListview(id);
             loadTable(TableDAO.getRoomByName(cbRoom.Text), txtTable.Text);
+        }
+
+        private void btnChuyenBan_Click(object sender, EventArgs e)
+        {
+            if (idTable > 0)
+            {
+                BillDTO checkBill = BillDAO.checkBillByTable(idTable);
+
+                if (checkBill != null)
+                {
+                    ChangeTable changeTable = new ChangeTable(idTable);
+                    changeTable.Show();
+                }else MessageBox.Show("Bàn trống không thể chuyển bàn", "Thông báo");
+            }
+            else MessageBox.Show("Vui lòng chọn bàn muốn chuyển", "Thông báo");
         }
     }
 }

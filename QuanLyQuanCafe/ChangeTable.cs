@@ -44,17 +44,7 @@ namespace QuanLyQuanCafe
 
                 if (checkBill != null)
                 {
-                    btn.BackColor = Color.FromArgb(128, 247, 113);
-
-                    btn.Text = item.TableName + Environment.NewLine + "\n" + "Đã có người";
-                    btn.Cursor = Cursors.Hand;
-                    btn.BackgroundImageLayout = ImageLayout.Zoom;
-                    btn.BackgroundImage = Resources.dining_table__2_;
-                    btn.ImageAlign = ContentAlignment.MiddleCenter;
-                    btn.Tag = item;
-                    btn.Name = item.TableID.ToString();
-                    btn.Font = new System.Drawing.Font(btn.Font.FontFamily, 10, FontStyle.Bold);
-                    flpListTable.Controls.Add(btn);
+                    
                 }
                 else
                 {
