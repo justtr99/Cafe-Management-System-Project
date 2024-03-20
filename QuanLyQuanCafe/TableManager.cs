@@ -1,15 +1,18 @@
 ﻿using Microsoft.Office.Interop.Excel;
+using Newtonsoft.Json;
 using QuanLyCafe.DAO;
 using QuanLyCafe.Del;
 using QuanLyCafe.Models;
 using QuanLyQuanCafe.DAO;
 using QuanLyQuanCafe.Models;
+using QuanLyQuanCafe.PayQR;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -38,6 +41,14 @@ namespace QuanLyQuanCafe
             LoadDgvAccount();
             LoadDgvFood();
             cbSearchFoodType.SelectedIndex = 0;
+            using (WebClient client = new WebClient())
+            {
+                var htmlData = client.DownloadData("https://api.vietqr.io/v2/banks");
+                var bankRawJson = Encoding.UTF8.GetString(htmlData);
+                var listBankData = JsonConvert.DeserializeObject<Bank>(bankRawJson);
+                cb_nganhang.DataSource = listBankData.data;
+                cb_nganhang.DisplayMember = "custom_name";
+            }
         }
         private void TableManager_Load(object sender, EventArgs e)
         {
@@ -327,8 +338,8 @@ namespace QuanLyQuanCafe
                 {
                     if (countError == 0)
                     {
-                        bool check = FoodDAO.updateFood(int.Parse(textFoodID.Text), textFoodName.Text, float.Parse(textFoodPrice.Text), type, (int)numberAddQuantity.Value,txtLinkImg.Text);
-                        if (check) { MessageBox.Show("Sửa thành công","Thông báo"); }
+                        bool check = FoodDAO.updateFood(int.Parse(textFoodID.Text), textFoodName.Text, float.Parse(textFoodPrice.Text), type, (int)numberAddQuantity.Value, txtLinkImg.Text);
+                        if (check) { MessageBox.Show("Sửa thành công", "Thông báo"); }
                         else { MessageBox.Show("Sửa thất bại", "Thông báo"); }
                     }
                 }
@@ -718,6 +729,18 @@ namespace QuanLyQuanCafe
         {
 
         }
+
+
+        //
+
+
+        //Page QR
+
+        private void btnCheck_Click(object sender, EventArgs e)
+        {
+
+        }
+
 
         //
     }

@@ -96,7 +96,20 @@ create table BillInfo(
   foreign key (FoodID) references Food(FoodID)
 )
 
+create table QR (
+  QRId int primary key,
+  nganHang nvarchar(100),
+  Stk nvarchar (100),
+  Template nvarchar (50),
+  TenTk nvarchar (200),
+  ThongTinThem nvarchar (max)
+)
+
 GO
+--====================INSERT QR
+insert into QR (QRId,nganHang,Stk,Template,TenTk,ThongTinThem)
+values (1,'','','','','')
+
 --====================INSERT ROLE
 insert into Role values(0,N'Quản lý')
 insert into Role values(1,N'Nhân viên')
