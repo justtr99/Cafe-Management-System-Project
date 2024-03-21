@@ -25,31 +25,32 @@ namespace QuanLyQuanCafe
             SetRoundedButton(btnAddFood, 10);
             SetRoundedButton(btnChuyenBan, 10);
             SetRoundedButton(btnThanhToan, 10);
+            SetRoundedButton(btnQR, 10);
         }
 
         private void SetRoundedButton(System.Windows.Forms.Button button, int radius)
         {
             GraphicsPath path = new GraphicsPath();
-            path.AddArc(0, 0, radius, radius, 180, 90); // Góc trên bên trái
-            path.AddArc(button.Width - radius, 0, radius, radius, 270, 90); // Góc trên bên phải
-            path.AddArc(button.Width - radius, button.Height - radius, radius, radius, 0, 90); // Góc dưới bên phải
-            path.AddArc(0, button.Height - radius, radius, radius, 90, 90); // Góc dưới bên trái
+            path.AddArc(0, 0, radius, radius, 180, 90); 
+            path.AddArc(button.Width - radius, 0, radius, radius, 270, 90); 
+            path.AddArc(button.Width - radius, button.Height - radius, radius, radius, 0, 90); 
+            path.AddArc(0, button.Height - radius, radius, radius, 90, 90);
             path.CloseFigure();
-            button.Region = new Region(path); // Áp dụng hình dạng vào nút
+            button.Region = new Region(path); 
         }
         private void SetRoundedRichTextBox(RichTextBox richTextBox, int radius)
         {
             GraphicsPath path = new GraphicsPath();
-            path.AddArc(0, 0, radius, radius, 180, 90); // Góc trên bên trái
-            path.AddLine(radius, 0, richTextBox.Width - radius, 0); // Đoạn thẳng trên
-            path.AddArc(richTextBox.Width - radius, 0, radius, radius, 270, 90); // Góc trên bên phải
-            path.AddLine(richTextBox.Width, radius, richTextBox.Width, richTextBox.Height - radius); // Đoạn thẳng bên phải
-            path.AddArc(richTextBox.Width - radius, richTextBox.Height - radius, radius, radius, 0, 90); // Góc dưới bên phải
-            path.AddLine(richTextBox.Width - radius, richTextBox.Height, radius, richTextBox.Height); // Đoạn thẳng dưới
-            path.AddArc(0, richTextBox.Height - radius, radius, radius, 90, 90); // Góc dưới bên trái
-            path.AddLine(0, richTextBox.Height - radius, 0, radius); // Đoạn thẳng bên trái
+            path.AddArc(0, 0, radius, radius, 180, 90); 
+            path.AddLine(radius, 0, richTextBox.Width - radius, 0); 
+            path.AddArc(richTextBox.Width - radius, 0, radius, radius, 270, 90); 
+            path.AddLine(richTextBox.Width, radius, richTextBox.Width, richTextBox.Height - radius); 
+            path.AddArc(richTextBox.Width - radius, richTextBox.Height - radius, radius, radius, 0, 90); 
+            path.AddLine(richTextBox.Width - radius, richTextBox.Height, radius, richTextBox.Height); 
+            path.AddArc(0, richTextBox.Height - radius, radius, radius, 90, 90); 
+            path.AddLine(0, richTextBox.Height - radius, 0, radius); 
             path.CloseFigure();
-            richTextBox.Region = new Region(path); // Áp dụng hình dạng vào RichTextBox
+            richTextBox.Region = new Region(path); 
         }
 
 
@@ -96,6 +97,7 @@ namespace QuanLyQuanCafe
 
         int BillClickID = 0;
         TableDTO tableClick = null;
+        int totalForQR = 0;
         public void loadListview(int billID)
         {
             listViewBill.Items.Clear();
@@ -126,6 +128,7 @@ namespace QuanLyQuanCafe
             listViewBill.Items.Add(itemTotal);
             TotalBill(total);
             BillClickID = billID;
+            totalForQR = (int)total;
         }
         private void btn_Click(object sender, EventArgs e)
         {
@@ -265,7 +268,7 @@ namespace QuanLyQuanCafe
             }
             else
             {
-                MessageBox.Show("Chưa chọn bàn","Thông báo");
+                MessageBox.Show("Chưa chọn bàn", "Thông báo");
             }
         }
 
@@ -287,7 +290,8 @@ namespace QuanLyQuanCafe
                     ChangeTable changeTable = new ChangeTable(idTable);
                     changeTable.FormClosed += changeTable_FormClosed;
                     changeTable.Show();
-                }else MessageBox.Show("Bàn trống không thể chuyển bàn", "Thông báo");
+                }
+                else MessageBox.Show("Bàn trống không thể chuyển bàn", "Thông báo");
             }
             else MessageBox.Show("Vui lòng chọn bàn muốn chuyển", "Thông báo");
         }
@@ -297,6 +301,19 @@ namespace QuanLyQuanCafe
             int id = BillDAO.getBillByTable(idTable);
             loadListview(id);
             loadTable(TableDAO.getRoomByName(cbRoom.Text), txtTable.Text);
+        }
+
+        private void btnQR_Click(object sender, EventArgs e)
+        {
+            if (totalForQR > 0)
+            {
+                QRPay qRPay = new QRPay(totalForQR.ToString());
+                qRPay.Show();
+            }
+            else
+            {
+                MessageBox.Show("Bill trống không thể thanh toán","Thông báo");
+            }
         }
     }
 }

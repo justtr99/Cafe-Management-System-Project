@@ -42,6 +42,7 @@
             richTextBox1 = new RichTextBox();
             btnChuyenBan = new Button();
             btnThanhToan = new Button();
+            btnQR = new Button();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
@@ -202,7 +203,7 @@
             btnThanhToan.FlatStyle = FlatStyle.Flat;
             btnThanhToan.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
             btnThanhToan.ForeColor = SystemColors.ButtonHighlight;
-            btnThanhToan.Location = new Point(905, 610);
+            btnThanhToan.Location = new Point(772, 610);
             btnThanhToan.Name = "btnThanhToan";
             btnThanhToan.Size = new Size(109, 39);
             btnThanhToan.TabIndex = 14;
@@ -210,11 +211,28 @@
             btnThanhToan.UseVisualStyleBackColor = false;
             btnThanhToan.Click += btnThanhToan_Click;
             // 
+            // btnQR
+            // 
+            btnQR.BackColor = Color.FromArgb(219, 184, 142);
+            btnQR.Cursor = Cursors.Hand;
+            btnQR.FlatAppearance.BorderSize = 0;
+            btnQR.FlatStyle = FlatStyle.Flat;
+            btnQR.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            btnQR.ForeColor = SystemColors.ButtonHighlight;
+            btnQR.Location = new Point(905, 610);
+            btnQR.Name = "btnQR";
+            btnQR.Size = new Size(109, 39);
+            btnQR.TabIndex = 15;
+            btnQR.Text = "Mã QR";
+            btnQR.UseVisualStyleBackColor = false;
+            btnQR.Click += btnQR_Click;
+            // 
             // OrderForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1008, 650);
+            Controls.Add(btnQR);
             Controls.Add(btnThanhToan);
             Controls.Add(btnChuyenBan);
             Controls.Add(richTextBox1);
@@ -253,5 +271,6 @@
         private RichTextBox richTextBox1;
         private Button btnChuyenBan;
         private Button btnThanhToan;
+        private Button btnQR;
     }
 }
