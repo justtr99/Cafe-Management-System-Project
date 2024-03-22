@@ -105,6 +105,28 @@ create table QR (
   ThongTinThem nvarchar (max)
 )
 
+-- Tạo hoặc thay đổi trigger để tự động cập nhật số lượng khi thêm mới mặt hàng vào hóa đơn
+CREATE OR ALTER TRIGGER UpdateQuantityOnBillInfo
+ON BillInfo
+INSTEAD OF INSERT
+AS
+BEGIN
+
+    UPDATE b
+    SET Quantity = b.Quantity + i.Quantity
+    FROM BillInfo b
+    INNER JOIN inserted i ON b.BillID = i.BillID AND b.FoodID = i.FoodID
+
+    INSERT INTO BillInfo (BillID, FoodID, Quantity)
+    SELECT i.BillID, i.FoodID, i.Quantity
+    FROM inserted i
+    WHERE NOT EXISTS (
+        SELECT 1 
+        FROM BillInfo 
+        WHERE BillID = i.BillID AND FoodID = i.FoodID
+    );
+END;
+
 GO
 --====================INSERT QR
 insert into QR (QRId,nganHang,Stk,Template,TenTk,ThongTinThem)

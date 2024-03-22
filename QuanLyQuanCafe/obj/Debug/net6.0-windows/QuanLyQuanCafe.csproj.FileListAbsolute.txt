@@ -154,3 +154,4 @@ C:\Users\Admin\Desktop\Cafe\QuanLyQuanCafe\Cafe-Management-System-Project\QuanLy
 C:\Users\Admin\Desktop\Cafe\QuanLyQuanCafe\Cafe-Management-System-Project\QuanLyQuanCafe\obj\Debug\net6.0-windows\QuanLyQuanCafe.ChangeTable.resources
 C:\Users\Admin\Desktop\Cafe\QuanLyQuanCafe\Cafe-Management-System-Project\QuanLyQuanCafe\bin\Debug\net6.0-windows\Newtonsoft.Json.dll
 C:\Users\Admin\Desktop\Cafe\QuanLyQuanCafe\Cafe-Management-System-Project\QuanLyQuanCafe\bin\Debug\net6.0-windows\RestSharp.dll
+C:\Users\Admin\Desktop\Cafe\QuanLyQuanCafe\Cafe-Management-System-Project\QuanLyQuanCafe\obj\Debug\net6.0-windows\QuanLyQuanCafe.QRPay.resources

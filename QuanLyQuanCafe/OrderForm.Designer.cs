@@ -152,6 +152,7 @@
             listViewBill.TabIndex = 9;
             listViewBill.UseCompatibleStateImageBehavior = false;
             listViewBill.View = View.Details;
+            listViewBill.SelectedIndexChanged += listViewBill_SelectedIndexChanged;
             listViewBill.DoubleClick += listViewBill_DoubleClick;
             // 
             // label4

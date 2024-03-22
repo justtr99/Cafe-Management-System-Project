@@ -31,26 +31,26 @@ namespace QuanLyQuanCafe
         private void SetRoundedButton(System.Windows.Forms.Button button, int radius)
         {
             GraphicsPath path = new GraphicsPath();
-            path.AddArc(0, 0, radius, radius, 180, 90); 
-            path.AddArc(button.Width - radius, 0, radius, radius, 270, 90); 
-            path.AddArc(button.Width - radius, button.Height - radius, radius, radius, 0, 90); 
+            path.AddArc(0, 0, radius, radius, 180, 90);
+            path.AddArc(button.Width - radius, 0, radius, radius, 270, 90);
+            path.AddArc(button.Width - radius, button.Height - radius, radius, radius, 0, 90);
             path.AddArc(0, button.Height - radius, radius, radius, 90, 90);
             path.CloseFigure();
-            button.Region = new Region(path); 
+            button.Region = new Region(path);
         }
         private void SetRoundedRichTextBox(RichTextBox richTextBox, int radius)
         {
             GraphicsPath path = new GraphicsPath();
-            path.AddArc(0, 0, radius, radius, 180, 90); 
-            path.AddLine(radius, 0, richTextBox.Width - radius, 0); 
-            path.AddArc(richTextBox.Width - radius, 0, radius, radius, 270, 90); 
-            path.AddLine(richTextBox.Width, radius, richTextBox.Width, richTextBox.Height - radius); 
-            path.AddArc(richTextBox.Width - radius, richTextBox.Height - radius, radius, radius, 0, 90); 
-            path.AddLine(richTextBox.Width - radius, richTextBox.Height, radius, richTextBox.Height); 
-            path.AddArc(0, richTextBox.Height - radius, radius, radius, 90, 90); 
-            path.AddLine(0, richTextBox.Height - radius, 0, radius); 
+            path.AddArc(0, 0, radius, radius, 180, 90);
+            path.AddLine(radius, 0, richTextBox.Width - radius, 0);
+            path.AddArc(richTextBox.Width - radius, 0, radius, radius, 270, 90);
+            path.AddLine(richTextBox.Width, radius, richTextBox.Width, richTextBox.Height - radius);
+            path.AddArc(richTextBox.Width - radius, richTextBox.Height - radius, radius, radius, 0, 90);
+            path.AddLine(richTextBox.Width - radius, richTextBox.Height, radius, richTextBox.Height);
+            path.AddArc(0, richTextBox.Height - radius, radius, radius, 90, 90);
+            path.AddLine(0, richTextBox.Height - radius, 0, radius);
             path.CloseFigure();
-            richTextBox.Region = new Region(path); 
+            richTextBox.Region = new Region(path);
         }
 
 
@@ -312,8 +312,13 @@ namespace QuanLyQuanCafe
             }
             else
             {
-                MessageBox.Show("Bill trống không thể thanh toán","Thông báo");
+                MessageBox.Show("Bill trống không thể thanh toán", "Thông báo");
             }
+        }
+
+        private void listViewBill_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
