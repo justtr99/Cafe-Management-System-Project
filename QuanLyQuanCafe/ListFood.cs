@@ -102,11 +102,20 @@ namespace QuanLyQuanCafe
                     int quantity = (int)numericUpDownFood.Value;
                     string[] getPrice = labelPrice.Text.Split("đ");
                     float price = float.Parse(getPrice[0]);
-                    if (quantity > 0)
+                    int countFood = 0;
+                    foreach (var item in listOrder)
+                    {
+                        if(item.FoodName.Equals(foodName))
+                        {
+                            item.Quantity += quantity;
+                            countFood = 1;
+                        }                     
+                    }
+                    if(countFood == 0)
                     {
                         listOrder.Add(new FoodDTO(foodName, quantity, price));
                     }
-
+                    
                     loadListView();
                 }
 
