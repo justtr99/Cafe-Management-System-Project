@@ -1,3 +1,18 @@
+PHẦN MỀM QUẢN LÝ QUÁN CAFE 
+--Dự án xây dựng phần mềm giúp quản lý nhân viên, hàng hóa và hóa đơn trong một quán cafe--
+ * Các chức năng chính
+      + CRUD nhân viên, bàn ăn, hàng hóa, hóa đơn của từng bàn...
+      + Xuất thông tin hóa đơn ra file Excel
+      + Cập nhật mã QR để thực hiện thanh toán
+      + Tự động tạo mã QR dựa trên thông tin của hóa đơn hiện tại để tiện thanh toán
+* Công nghệ sử dụng
+      + Front-end: Windows Form Application(WinFormApp)
+      + Backed-end: C#(ADO.NET, Newtonsoft. Json (Json.NET)) 
+      + Database: SQL
+
+
+CÁC MÀN HÌNH CHÍNH
+
 1. Màn hình login
 
 ![image](https://github.com/justtr99/Cafe-Management-System-Project/assets/112843750/c76181f4-ee15-48fb-a14c-eff2311c639d)
