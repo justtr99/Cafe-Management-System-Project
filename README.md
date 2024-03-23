@@ -1,5 +1,5 @@
-PHẦN MỀM QUẢN LÝ QUÁN CAFE 
---Dự án xây dựng phần mềm giúp quản lý nhân viên, hàng hóa và hóa đơn trong một quán cafe--
+PHẦN MỀM QUẢN LÝ QUÁN CAFE  
+ --Dự án xây dựng phần mềm giúp quản lý nhân viên, hàng hóa và hóa đơn trong một quán cafe--
  * Các chức năng chính
       + CRUD nhân viên, bàn ăn, hàng hóa, hóa đơn của từng bàn...
       + Xuất thông tin hóa đơn ra file Excel
