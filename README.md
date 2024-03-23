@@ -1,4 +1,4 @@
-![image](https://github.com/justtr99/Cafe-Management-System-Project/assets/112843750/aa7b9e90-cb41-4085-ab42-2ad0a985381d)1. Màn hình login
+1. Màn hình login
 
 ![image](https://github.com/justtr99/Cafe-Management-System-Project/assets/112843750/c76181f4-ee15-48fb-a14c-eff2311c639d)
 
